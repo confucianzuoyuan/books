@@ -99,7 +99,7 @@
   columns: (auto, auto),
   gutter: 3pt,
   rect[“Bingley.”],
-  [霸总剧中的男二，有钱，长得帅，温和，不够霸气有担当。宾利一年4～5千英镑。挺狠的。]
+  [霸总剧中的男二，有钱，长得帅，温和，不够霸气不够有担当。宾利一年4～5千英镑。挺狠的。]
 )
 
 #grid(
@@ -134,49 +134,49 @@
   columns: (auto, auto),
   gutter: 3pt,
   rect[“Is that his design in settling here?”],
-  [tiresome: 令人厌烦的]
+  [他住这里就是为了这个打算吗？（他住这里就是为了娶我们的女儿吗？😃）]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“Design! nonsense, how can you talk so! But it is very likely that he may fall in love with one of them, and therefore you must visit him as soon as he comes.”],
-  [tiresome: 令人厌烦的]
+  [别废话！赶紧去拜访！]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“I see no occasion for that. You and the girls may go, or you may send them by themselves, which perhaps will be still better, for as you are as handsome as any of them, Mr. Bingley might like you the best of the party.”],
-  [tiresome: 令人厌烦的]
+  [开始嘲讽]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“My dear, you flatter me. I certainly _have_ had my share of beauty, but I do not pretend to be anything extraordinary now. When a woman has five grown up daughters, she ought to give over thinking of her own beauty.”],
-  [tiresome: 令人厌烦的]
+  [没听出嘲讽，自恋上了。]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“In such cases, a woman has not often much beauty to think of.”],
-  [tiresome: 令人厌烦的]
+  [继续嘲讽]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“But, my dear, you must indeed go and see Mr. Bingley when he comes into the neighbourhood.”],
-  [这句极妙！]
+  [直接忽略，还是继续劝本内特先生去拜访。]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“It is more than I engage for, I assure you.”],
-  [这句极妙！]
+  [这不是我份内之事。]
 )
 
 #grid(
@@ -190,42 +190,46 @@
   columns: (auto, auto),
   gutter: 3pt,
   rect[“You are over scrupulous surely. I dare say Mr. Bingley will be very glad to see you; and I will send a few lines by you to assure him of my hearty consent to his marrying which ever he chooses of the girls; though I must throw in a good word for my little Lizzy.”],
-  []
+  [scrupulous: 谨慎的\
+   consent: 赞同\
+   本内特很喜欢二女儿伊丽莎白]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“I desire you will do no such thing. Lizzy is not a bit better than the others; and I am sure she is not half so handsome as Jane, nor half so good humoured as Lydia. But you are always giving her the preference.”],
-  []
+  [本内特太太不太喜欢伊丽莎白]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“They have none of them much to recommend them,” replied he; “they are all silly and ignorant like other girls; but Lizzy has something more of quickness than her sisters.”],
-  []
+  [其它女儿在本内特先生看来，都是傻叉]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“Mr. Bennet, how can you abuse your own children in such a way? You take delight in vexing me. You have no compassion on my poor nerves.”],
-  []
+  [abuse: 谩骂\
+   vex: 烦恼\
+   compassion: 同情]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“You mistake me, my dear. I have a high respect for your nerves. They are my old friends. I have heard you mention them with consideration these twenty years at least.”],
-  []
+  [丈夫缺位，导致妻子心理状态不好，丈夫还嘲讽。]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“Ah! you do not know what I suffer.”],
-  []
+  [你不知道我都忍受了些什么]
 )
 
 #grid(
@@ -246,7 +250,7 @@
   columns: (auto, auto),
   gutter: 3pt,
   rect[“Depend upon it, my dear, that when there are twenty, I will visit them all.”],
-  []
+  [继续赌气吵架]
 )
 
 #grid(
