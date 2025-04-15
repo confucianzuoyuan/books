@@ -257,7 +257,7 @@
   columns: (auto, auto),
   gutter: 3pt,
   rect[Mr. Bennet was so odd a mixture of quick parts, sarcastic humour, reserve, and caprice, that the experience of three and twenty years had been insufficient to make his wife understand his character. Her mind was less difficult to develop. She was a woman of mean understanding, little information, and uncertain temper. When she was discontented she fancied herself nervous. The business of her life was to get her daughters married; its solace was visiting and news.],
-  [caprice: 任性\
+  [caprice: /kəˈpriːs/, 任性\
    solace: 慰藉\
    人到中年才发现，本内特太太是被本内特先生逼成这样的。丈夫除了不停的开启嘲讽技能，就是坐那里看书，什么都不干。]
 )
@@ -268,7 +268,9 @@
   columns: (auto, auto),
   gutter: 3pt,
   rect[Mr. Bennet was among the earliest of those who waited on Mr. Bingley. He had always intended to visit him, though to the last always assuring his wife that he should not go; and till the evening after the visit was paid, she had no knowledge of it. It was then disclosed in the following manner. Observing his second daughter employed in trimming a hat, he suddenly addressed her with:],
-  []
+  [disclose: 透露\
+   trim: 裁剪\
+   address: speak, say, talk]
 )
 
 #grid(
@@ -282,70 +284,76 @@
   columns: (auto, auto),
   gutter: 3pt,
   rect[“We are not in a way to know what Mr. Bingley likes,” said her mother resentfully, “since we are not to visit.”],
-  []
+  [resentfully: 怨恨的]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“But you forget, mama,” said Elizabeth, “that we shall meet him at the assemblies, and that Mrs. Long has promised to introduce him.”],
-  []
+  [assembly: 聚会, meeting]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“I do not believe Mrs. Long will do any such thing. She has two nieces of her own. She is a selfish, hypocritical woman, and I have no opinion of her.”],
-  []
+  [hypocritical: /ˌhɪpəˈkrɪtᵻkl/, 虚伪的]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“No more have I,” said Mr. Bennet; “and I am glad to find that you do not depend on her serving you.”],
-  []
+  [嘲讽]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[Mrs. Bennet deigned not to make any reply; but unable to contain herself, began scolding one of her daughters.],
-  []
+  [deign: /deɪn/, 放下架子, 屈尊\
+   contain herself: 无法自控\
+   scold: 骂]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“Don’t keep coughing so, Kitty, for heaven’s sake! Have a little compassion on my nerves. You tear them to pieces.”],
-  []
+  [cough: /kɒf/, 咳嗽\
+   你要把我的神经撕成碎片吗？]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“Kitty has no discretion in her coughs,” said her father; “she times them ill.”],
-  []
+  [discretion: 审慎\
+   她咳嗽也太不谨慎了, 没选好时间]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“I do not cough for my own amusement,” replied Kitty fretfully.],
-  []
+  [fretfully: 烦躁的\
+   我又不是咳嗽着玩儿]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“When is your next ball to be, Lizzy?”],
-  []
+  [ball: 舞会]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“Tomorrow fortnight.”],
-  []
+  [fortnight: 两周\
+   tomorrow fortnight: two weeks from tomorrow]
 )
 
 #grid(
@@ -366,21 +374,26 @@
   columns: (auto, auto),
   gutter: 3pt,
   rect[“Impossible, Mr. Bennet, impossible, when I am not acquainted with him myself; how can you be so teasing?”],
-  []
+  [be acquainted with: to know or be familiar with something\
+   tease: make fun of or attempt to provoke in a playful way]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“I honour your circumspection. A fortnight’s acquaintance is certainly very little. One cannot know what a man really is by the end of a fortnight. But if we do not venture, somebody else will; and after all, Mrs. Long and her nieces must stand their chance; and therefore, as she will think it an act of kindness, if you decline the office, I will take it on myself.”],
-  []
+  [circumspection: 谨慎\
+   acquaintance: 熟识\
+   venture: 冒险\
+   stand their chance: 抓住机会\
+   decline: 拒绝]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[The girls stared at their father. Mrs. Bennet said only, “Nonsense, nonsense!”],
-  []
+  [stare: 盯着]
 )
 
 #grid(
