@@ -412,14 +412,14 @@
   columns: (auto, auto),
   gutter: 3pt,
   rect[Mary wished to say something very sensible, but knew not how.],
-  []
+  [sensible: 明智的, 理智的]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“While Mary is adjusting her ideas,” he continued, “let us return to Mr. Bingley.”],
-  []
+  [先让Mary憋一会儿, 我们继续]
 )
 
 #grid(
@@ -433,35 +433,39 @@
   columns: (auto, auto),
   gutter: 3pt,
   rect[“I am sorry to hear that; but why did not you tell me so before? If I had known as much this morning, I certainly would not have called on him. It is very unlucky; but as I have actually paid the visit, we cannot escape the acquaintance now.”],
-  []
+  [call on: 拜访]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[The astonishment of the ladies was just what he wished; that of Mrs. Bennet perhaps surpassing the rest; though when the first tumult of joy was over, she began to declare that it was what she had expected all the while.],
-  []
+  [surpass: 超过\
+   tumult: 骚乱]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“How good it was in you, my dear Mr. Bennet! But I knew I should persuade you at last. I was sure you loved your girls too well to neglect such an acquaintance. Well, how pleased I am! and it is such a good joke, too, that you should have gone this morning, and never said a word about it till now.”],
-  []
+  [persuade: 劝服\
+   neglect: 忽略]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“Now, Kitty, you may cough as much as you choose,” said Mr. Bennet; and, as he spoke, he left the room, fatigued with the raptures of his wife.],
-  []
+  [fatigue: 疲劳\
+   rapture: 狂喜]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
-  rect[“What an excellent father you have, girls,” said she, when the door was shut. “I do not know how you will ever make him amends for his kindness; or me either, for that matter. At our time of life, it is not so pleasant, I can tell you, to be making new acquaintance every day; but for your sakes, we would do anything. Lydia, my love, though you are the youngest, I dare say Mr. Bingley will dance with you at the next ball.”],
-  []
+  rect[“What an excellent father you have, girls,” said she, when the door was shut. “I do not know how you will ever #underline[make him amends for his kindness]; or me either, for that matter. At our time of life, it is not so pleasant, I can tell you, to be making new acquaintance every day; but for your sakes, we would do anything. Lydia, my love, though you are the youngest, I dare say Mr. Bingley will dance with you at the next ball.”],
+  [amend: 弥补\
+   make him amends for his kindness: 报答他的恩情]
 )
 
 #grid(
