@@ -400,7 +400,12 @@
   columns: (auto, auto),
   gutter: 3pt,
   rect[“What can be the meaning of that emphatic exclamation?” cried he. “Do you consider the forms of introduction, and the stress that is laid on them, as nonsense? I cannot quite agree with you there. What say you, Mary? for you are a young lady of deep reflection I know, and read great books, and make extracts.”],
-  []
+  [emphatic: 强调的\
+   exclamation: 感叹, 呐喊\
+   reflection: 深思\
+   extract: 摘抄\
+   本内特先生的意思是我们要给其他人介绍宾利他们, 而不是反过来, 把压力给到他们很有意思.\
+   顺便嘲讽一下Mary, Mary和左元一样, 相貌不好看有些自卑, 希望通过读书和装X来获得别人的认可.]
 )
 
 #grid(
@@ -463,14 +468,15 @@
   columns: (auto, auto),
   gutter: 3pt,
   rect[“Oh!” said Lydia stoutly, “I am not afraid; for though I am the youngest, I’m the tallest.”],
-  []
+  [stoutly: 坚决的\
+   普信又愚蠢, 一句话就描绘出来了, 奥斯汀的文笔了得]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[The rest of the evening was spent in conjecturing how soon he would return Mr. Bennet’s visit, and determining when they should ask him to dinner.],
-  []
+  [conjecture: 推测]
 )
 
 = III
