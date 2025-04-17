@@ -675,35 +675,38 @@
   columns: (auto, auto),
   gutter: 3pt,
   rect[When Jane and Elizabeth were alone, the former, who had been cautious in her praise of Mr. Bingley before, expressed to her sister how very much she admired him.],
-  []
+  [姐姐是傻白甜代表]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“He is just what a young man ought to be,” said she, “sensible, good humoured, lively; and I never saw such happy manners!---so much ease, with such perfect good breeding!”],
-  []
+  [breeding: 教养]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“He is also handsome,” replied Elizabeth, “which a young man ought likewise to be, if he possibly can. His character is thereby complete.”],
-  []
+  [宾利的性格很完整。不要完美，但要完整。]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“I was very much flattered by his asking me to dance a second time. I did not expect such a compliment.”],
-  []
+  [flatter: 奉承\
+   compliment: 赞扬]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
-  rect[“Did not you? I did for you. But that is one great difference between us. Compliments always take you by surprise, and me never. What could be more natural than his asking you again? He could not help seeing that you were about five times as pretty as every other woman in the room. No thanks to his gallantry for that. Well, he certainly is very agreeable, and I give you leave to like him. You have liked many a stupider person.”],
-  []
+  rect[“Did not you? I did for you. But that is one great difference between us. Compliments always take you by surprise, and me never. What could be more natural than his asking you again? He could not help seeing that you were about five times as pretty as every other woman in the room. No thanks to his gallantry for that. Well, he certainly is very agreeable, and I give you leave to like him. #underline[You have liked many a stupider person].”],
+  [gallantry: 骑士风度\
+   give you leave to like him: 我允许你喜欢他\
+   you have liked many a stupider person: 你喜欢过太多蠢货了]
 )
 
 #grid(
@@ -717,68 +720,103 @@
   columns: (auto, auto),
   gutter: 3pt,
   rect[“Oh! you are a great deal too apt you know, to like people in general. You never see a fault in anybody. All the world are good and agreeable in your eyes. I never heard you speak ill of a human being in my life.”],
-  []
+  [apt to: 倾向于]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“I would wish not to be hasty in censuring anyone; but I always speak what I think.”],
-  []
+  [censure: 批评\
+   hasty: 急着]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“I know you do; and it is that which makes the wonder. With your good sense, to be so honestly blind to the follies and nonsense of others! Affectation of candour is common enough;---one meets it everywhere. But to be candid without ostentation or design---to take the good of everybody’s character and make it still better, and say nothing of the bad---belongs to you alone. And so, you like this man’s sisters too, do you? Their manners are not equal to his.”],
-  []
+  [make the wonder: 问题所在, wonder是奇迹, Elizabeth觉得Jane能这样很神奇\
+   folly: 愚蠢\
+   nonsense: 胡扯\
+   affectation: 做作, 假装\
+   candour: 坦率\
+   candid: 坦率\
+   ostentation: 炫耀\
+   圣经说: "blessed are the pure in heart, 拥有纯洁心灵的人是有福之人"\
+   Elizabeth对宾利的姐妹们非常不满]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[“Certainly not; at first. But they are very pleasing women when you converse with them. Miss Bingley is to live with her brother and keep his house; and I am much mistaken if we shall not find a very charming neighbour in her.”],
-  []
+  [Jane连宾利的姐妹们都觉得很好]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[Elizabeth listened in silence, but was not convinced; their behaviour at the assembly had not been calculated to please in general; and with more quickness of observation and less pliancy of temper than her sister, and with a judgment too unassailed by any attention to herself, she was very little disposed to approve them. They were in fact very fine ladies; not deficient in good humour when they were pleased, nor in the power of being agreeable where they chose it; but proud and conceited. They were rather handsome, had been educated in one of the first private seminaries in town, had a fortune of twenty thousand pounds, were in the habit of spending more than they ought, and of associating with people of rank; and were therefore in every respect entitled to think well of themselves, and meanly of others. They were of a respectable family in the north of England; a circumstance more deeply impressed on their memories than that their brother’s fortune and their own had been acquired by trade.],
-  []
+  [pliancy: /ˈplʌɪən(t)si/, 柔韧, 灵活\
+   unassailed: 未受攻击的\
+   be disposed to: 倾向于\
+   deficient: 缺陷\
+   proud and conceited: 骄傲和自负, 左元最大的缺点\
+   seminary: 神学院, 专科学校\
+   entitle: 赋予, 给...权利\
+   meanly: 吝啬的, 小气的\
+   circumstance: 环境]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[Mr. Bingley inherited property to the amount of nearly a hundred thousand pounds from his father, who had intended to purchase an estate, but did not live to do it. Mr. Bingley intended it likewise, and sometimes made choice of his county; but as he was now provided with a good house and the liberty of a manor, it was doubtful to many of those who best knew the easiness of his temper, whether he might not spend the remainder of his days at Netherfield, and leave the next generation to purchase.],
-  []
+  [inherit: 继承\
+   county: 郡\
+   manor: 庄园\
+   remainder: 剩余的]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[His sisters were very anxious for his having an estate of his own; but though he was now established only as a tenant, Miss Bingley was by no means unwilling to preside at his table, nor was Mrs. Hurst, who had married a man of more fashion than fortune, less disposed to consider his house as her home when it suited her. Mr. Bingley had not been of age two years, when he was tempted by an accidental recommendation to look at Netherfield House. He did look at it and into it for half an hour, was pleased with the situation and the principal rooms, satisfied with what the owner said in its praise, and took it immediately.],
-  []
+  [tenant: 租客]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[Between him and Darcy there was a very steady friendship, in spite of a great opposition of character. Bingley was endeared to Darcy by the easiness, openness, ductility of his temper, though no disposition could offer a greater contrast to his own, and though with his own he never appeared dissatisfied. On the strength of Darcy’s regard Bingley had the firmest reliance, and of his judgment the highest opinion. In understanding Darcy was the superior. Bingley was by no means deficient, but Darcy was clever. He was at the same time haughty, reserved, and fastidious, and his manners, though well bred, were not inviting. In that respect his friend had greatly the advantage. Bingley was sure of being liked wherever he appeared, Darcy was continually giving offence.],
-  []
+  [steady: 坚固的\
+   endear: 受...喜爱\
+   ductility: 延展性\
+   reliance: 依靠\
+   haughty: 傲慢的\
+   reserved: 保守的\
+   fastidious: 挑剔的\
+   well bred: 很好的教养\
+   not inviting: 不欢迎别人\
+   offence: 冒犯]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[The manner in which they spoke of the Meryton assembly was sufficiently characteristic. Bingley had never met with pleasanter people or prettier girls in his life; everybody had been most kind and attentive to him, there had been no formality, no stiffness, he had soon felt acquainted with all the room; and as to Miss Bennet, he could not conceive an angel more beautiful. Darcy, on the contrary, had seen a collection of people in whom there was little beauty and no fashion, for none of whom he had felt the smallest interest, and from none received either attention or pleasure. Miss Bennet he acknowledged to be pretty, but she smiled too much.],
-  []
+  [sufficiently: 足够的\
+   characteristic: 个性化\
+   attentive: 殷勤的\
+   formality: 拘谨\
+   stiffness: 刚性, 拘谨, 生硬\
+   conceive: 设想]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
   rect[Mrs. Hurst and her sister allowed it to be so---but still they admired her and liked her, and pronounced her to be a sweet girl, and one whom they should not object to know more of. Miss Bennet was therefore established as a sweet girl, and their brother felt authorised by such commendation to think of her as he chose.],
-  []
+  [commendation: 赞许\
+   authorised: 授权的, 合法, 合格]
 )
