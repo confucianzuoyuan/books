@@ -1061,6 +1061,109 @@ Yours, etc.”],
    last: 上一个]
 )
 
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[“Dear Sir,
+
+“I must trouble you once more for congratulations. Elizabeth will soon be the wife of Mr. Darcy. Console Lady Catherine as well as you can. But, if I were you, I would stand by the nephew. He has more to give.
+
+“Yours sincerely, etc.”],
+  [
+   trouble: 麻烦\
+   congratulations: 祝贺\
+   console: 安慰\
+   nephew: 侄子\
+   sincerely: 真诚地]
+)
+
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[Miss Bingley’s congratulations to her brother, on his approaching marriage, were all that was affectionate and insincere. She wrote even to Jane on the occasion to express her delight, and repeat all her former professions of regard. Jane was not deceived, but she was affected; and though feeling no reliance on her, could not help writing her a much kinder answer than she knew was deserved.],
+  [
+   affectionate: 亲切的\
+   insincere: 不真诚的\
+   occasion: 场合\
+   delight: 高兴\
+   professions: 职业\
+   regard: 关心\
+   deceive: 欺骗\
+   affected: 受影响的\
+   reliance: 依靠\
+   could not help writing her a much kinder answer than she knew was deserved: 她写了比她知道的更友好的回答]
+)
+
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[The joy which Miss Darcy expressed on receiving similar information, was as sincere as her brother’s in sending it. Four sides of paper were insufficient to contain all her delight, and all her earnest desire of being loved by her sister.],
+  [
+   joy: 快乐\
+   express: 表达\
+   similar: 相似的\
+   information: 信息\
+   sincere: 真诚的\
+   insufficient: 不足的\
+   contain: 包含\
+   earnest: 认真\
+   desire: 渴望]
+)
+
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[Before any answer could arrive from Mr. Collins, or any congratulations to Elizabeth, from his wife, the Longbourn family heard that the Collinses were come themselves to Lucas lodge. The reason of this sudden removal was soon evident. Lady Catherine had been rendered so exceedingly angry by the contents of her nephew’s letter that Charlotte, really rejoicing in the match, was anxious to get away till the storm was blown over. At such a moment, the arrival of her friend was a sincere pleasure to Elizabeth, though in the course of their meetings she must sometimes think the pleasure dearly bought, when she saw Mr. Darcy exposed to all the parading and obsequious civility of her husband. He bore it however with admirable calmness. He could even listen to Sir William Lucas when he complimented him on carrying away the brightest jewel of the country, and expressed his hopes of their all meeting frequently at St. James’s, with very decent composure. If he did shrug his shoulders, it was not till Sir William was out of sight.],
+  [
+   answer: 回答\
+   arrive: 到达\
+   congratulations: 祝贺\
+   evident: 明显的\
+   sudden: 突然的\
+   removal: 移除\
+   rendered: 使得\
+   exceedingly: 非常\
+   contents: 内容\
+   rejoice: 感到高兴\
+   anxious: 焦虑的\
+   storm: 风暴\
+   blown over: 平息\
+   parading: 游行\
+   obsequious: 奉承的\
+   civility: 礼貌\
+   bore it however with admirable calmness: 他却以令人钦佩的冷静忍受了它\
+   listen to: 听着\
+   complimented: 赞美\
+   carrying away the brightest jewel of the country: 带走这个国家最亮的宝石\
+   expressed his hopes of their all meeting frequently at St. James’s, with very decent composure: 表达了他们在St. James's频繁见面的希望，表现得很得体]
+)
+
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[Mrs. Philips’s vulgarity was another, and perhaps a greater tax on his forbearance; and though Mrs. Philips, as well as her sister, stood in too much awe of him to speak with the familiarity which Bingley’s good humour encouraged, yet, whenever she did speak, she must be vulgar. Nor was her respect for him, though it made her more quiet, at all likely to make her more elegant. Elizabeth did all she could to shield him from the frequent notice of either, and was ever anxious to keep him to herself, and to those of her family with whom he might converse without mortification; and though the uncomfortable feelings arising from all this took from the season of courtship much of its pleasure, it added to the hope of the future; and she looked forward with delight to the time when they should be removed from society so little pleasing to either, to all the comfort and elegance of their family party at Pemberley.],
+  [
+   vulgarity: 粗俗\
+   tax on: 税\
+   forbearance: 克制\
+   awe: 敬畏\
+   familiarity: 熟悉\
+   good humour: 好脾气\
+   encourage: 鼓励\
+   speak: 说话\
+   respect: 尊重\
+   quiet: 安静\
+   likely: 可能的\
+   elegant: 优雅的\
+   shield: 保护\
+   frequent notice of either: 经常注意到任何一方\
+   anxious: 焦虑的\
+   converse: 交谈\
+   mortification: 屈辱\
+   uncomfortable feelings arising from all this took from the season of courtship much of its pleasure: 所有这些不舒服的感觉使得求婚季节失去了很多乐趣\
+   added to the hope of the future: 增加了对未来的希望]
+)
+
 = LXI
 
 #grid(
@@ -1131,7 +1234,16 @@ Yours, etc.”],
 “I wish you joy. If you love Mr. Darcy half as well as I do my dear Wickham, you must be very happy. It is a great comfort to have you so rich, and when you have nothing else to do, I hope you will think of us. I am sure Wickham would like a place at court very much, and I do not think we shall have quite money enough to live upon without some help. Any place would do, of about three or four hundred a year; but, however, do not speak to Mr. Darcy about it, if you had rather not.
 
 “Yours, etc.”],
-  []
+  [
+   effect: 效果\
+   joy: 快乐\
+   comfort: 安慰\
+   rich: 富有的\
+   think of: 想起\
+   place at court: 朝廷的职位\
+   money enough to live upon: 生活所需的钱\
+   speak to: 和...说话\
+   rather not: 宁愿不]
 )
 
 #grid(
