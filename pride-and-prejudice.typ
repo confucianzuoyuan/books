@@ -821,6 +821,212 @@
    authorised: 授权的, 合法, 合格]
 )
 
+= LX
+
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[Elizabeth’s spirits soon rising to playfulness again, she wanted Mr. Darcy to account for his having ever fallen in love with her. “How could you begin?” said she. “I can comprehend your going on charmingly, when you had once made a beginning; but what could set you off in the first place?”],
+  [comprehend: 理解\
+   set you off: 使你开始\
+   charmingly: 迷人地]
+)
+
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[“I cannot fix on the hour, or the spot, or the look, or the words, which laid the foundation. It is too long ago. I was in the middle before I knew that I had begun.”],
+  [laid the foundation: 奠定基础\
+   in the middle: 在中间]
+)
+
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[“My beauty you had early withstood, and as for my manners---my behaviour to you was at least always bordering on the uncivil, and I never spoke to you without rather wishing to give you pain than not. Now be sincere; did you admire me for my impertinence?”],
+  [withstand: 抵挡\
+   bordering on: 接近于\
+   uncivil: 粗鲁的\
+   sincere: 真诚的\
+   impertinence: 粗鲁无礼]
+)
+
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[“For the liveliness of your mind, I did.”],
+  [liveliness: 活泼\
+   mind: 思维]
+)
+
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[“You may as well call it impertinence at once. It was very little less. The fact is, that you were sick of civility, of deference, of officious attention. You were disgusted with the women who were always speaking and looking, and thinking for your approbation alone. I roused, and interested you, because I was so unlike them. Had you not been really amiable you would have hated me for it; but in spite of the pains you took to disguise yourself, your feelings were always noble and just; and in your heart, you thoroughly despised the persons who so assiduously courted you. There---I have saved you the trouble of accounting for it; and really, all things considered, I begin to think it perfectly reasonable. To be sure, you knew no actual good of me---but nobody thinks of that when they fall in love.”],
+  [civility: 礼貌\
+   deference: 尊重\
+   officious: 多管闲事的\
+   disgusted: 厌恶\
+   approbation: 赞许\
+   rouse: 激起\
+   assiduously: 刻意地\
+   court: 追求\
+   all things considered: 综合考虑\
+   reasonable: 合理的]
+)
+
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[“Was there no good in your affectionate behaviour to Jane, while she was ill at Netherfield?”],
+  [affectionate: 亲切的\
+   ill: 生病]
+)
+
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[“Dearest Jane! who could have done less for her? But make a virtue of it by all means. My good qualities are under your protection, and you are to exaggerate them as much as possible; and, in return, it belongs to me to find occasions for teasing and quarrelling with you as often as may be; and I shall begin directly by asking you what made you so unwilling to come to the point at last. What made you so shy of me, when you first called, and afterwards dined here? Why, especially, when you called, did you look as if you did not care about me?”],
+  [virtue: 美德\
+   exaggerate: 夸大\
+   occasion: 场合\
+   tease: 逗弄\
+   quarrel: 吵架\
+   unwilling: 不情愿的\
+   shy of: 害羞的\
+   care about: 在意]
+)
+
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[“Because you were grave and silent, and gave me no encouragement.”],
+  [grave: 严肃的\
+   silent: 沉默的\
+   encouragement: 鼓励]
+)
+
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[“But I was embarrassed.”],
+  [embarrassed: 尴尬的]
+)
+
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[“And so was I.”],
+  []
+)
+
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[“You might have talked to me more when you came to dinner.”],
+  [talk to: 和...说话]
+)
+
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[“A man who had felt less, might.”],
+  [less: 更少的\
+   might: 可能]
+)
+
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[“How unlucky that you should have a reasonable answer to give, and that I should be so reasonable as to admit it! But I wonder how long you would have gone on, if you had been left to yourself. I wonder when you would have spoken, if I had not asked you! My resolution of thanking you for your kindness to Lydia had certainly great effect. Too much, I am afraid; for what becomes of the moral, if our comfort springs from a breach of promise, for I ought not to have mentioned the subject? This will never do.”],
+  [unlucky: 不幸的\
+   admit: 承认\
+   resolution: 决心\
+   effect: 效果\
+   moral: 道德\
+   comfort: 安慰\
+   springs from: 源于\
+   breach of promise: 违约\
+   ought not to: 不应该]
+)
+
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[“You need not distress yourself. The moral will be perfectly fair. Lady Catherine’s unjustifiable endeavours to separate us, were the means of removing all my doubts. I am not indebted for my present happiness to your eager desire of expressing your gratitude. I was not in a humour to wait for any opening of yours. My aunt’s intelligence had given me hope, and I was determined at once to know everything.”],
+  [distress: 使痛苦\
+   unjustifiable: 不可原谅的\
+   endeavour: 努力\
+   separate: 分开\
+   indebted: 感激的\
+   humour: 心情\
+   intelligence: 消息\
+   determined: 决心的]
+)
+
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[“Lady Catherine has been of infinite use, which ought to make her happy, for she loves to be of use. But tell me, what did you come down to Netherfield for? Was it merely to ride to Longbourn and be embarrassed? or had you intended any more serious consequence?”],
+  [infinite: 无限的\
+   consequence: 结果\
+   merely: 仅仅\
+   serious: 严肃的]
+)
+
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[“My real purpose was to see you, and to judge, if I could, whether I might ever hope to make you love me. My avowed one, or what I avowed to myself, was to see whether your sister were still partial to Bingley, and if she were, to make the confession to him which I have since made.”],
+  [avowed: 公然的\
+   partial: 偏爱的\
+   confession: 坦白]
+)
+
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[“Shall you ever have courage to announce to Lady Catherine, what is to befall her?”],
+  [to befall: 发生]
+)
+
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[“I am more likely to want time than courage, Elizabeth. But it ought to be done, and if you will give me a sheet of paper, it shall be done directly.”],
+  [want time: 需要时间\
+   sheet of paper: 一张纸\
+   directly: 直接地]
+)
+
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[],
+  []
+)
+
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[],
+  []
+)
+
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[],
+  []
+)
+
+#grid(
+  columns: (auto, auto),
+  gutter: 3pt,
+  rect[],
+  []
+)
+
 = LXI
 
 #grid(
