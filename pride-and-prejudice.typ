@@ -1002,29 +1002,63 @@
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
-  rect[],
-  []
+  rect[“And if I had not a letter to write myself, I might sit by you, and admire the evenness of your writing, as another young lady once did. But I have an aunt, too, who must not be longer neglected.”],
+  [
+   evenness: 平整\
+   neglected: 忽视]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
-  rect[],
-  []
+  rect[From an unwillingness to confess how much her intimacy with Mr. Darcy had been overrated, Elizabeth had never yet answered Mrs. Gardiner’s long letter, but now, having that to communicate which she knew would be most welcome, she was almost ashamed to find that her uncle and aunt had already lost three days of happiness, and immediately wrote as follows:],
+  [
+   unwillingness: 不情愿\
+   intimacy: 亲密\
+   overrated: 高估\
+   communicate: 交流\
+   ashamed: 羞愧的\
+   happiness: 幸福]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
-  rect[],
-  []
+  rect[“I would have thanked you before, my dear aunt, as I ought to have done, for your long, kind, satisfactory, detail of particulars; but to say the truth, I was too cross to write. You supposed more than really existed. But now suppose as much as you choose; give a loose to your fancy, indulge your imagination in every possible flight which the subject will afford, and unless you believe me actually married, you cannot greatly err. You must write again very soon, and praise him a great deal more than you did in your last. I thank you, again and again, for not going to the Lakes. How could I be so silly as to wish it! Your idea of the ponies is delightful. We will go round the Park every day. I am the happiest creature in the world. Perhaps other people have said so before, but not one with such justice. I am happier even than Jane; she only smiles, I laugh. Mr. Darcy sends you all the love in the world, that he can spare from me. You are all to come to Pemberley at Christmas.
+
+Yours, etc.”],
+  [
+   thank: 感谢\
+   ought to: 应该\
+   satisfactory: 令人满意的\
+   detail: 细节\
+   particulars: 细节\
+   cross: 生气\
+   suppose: 假设\
+   loose: 放松\
+   indulge: 沉迷于\
+   imagination: 想象力\
+   flight: 飞行, 逃跑\
+   afford: 提供\
+   err: 犯错\
+   praise: 赞美\
+   Lakes: 湖泊\
+   silly: 愚蠢的\
+   idea: 主意\
+   ponies: 小马\
+   round the Park: 环绕公园\
+   creature: 生物\
+   justice: 公正]
 )
 
 #grid(
   columns: (auto, auto),
   gutter: 3pt,
-  rect[],
-  []
+  rect[Mr. Darcy’s letter to Lady Catherine, was in a different style; and still different from either, was what Mr. Bennet sent to Mr. Collins, in reply to his last.],
+  [
+   style: 风格\
+   reply: 回复\
+   last: 上一个]
 )
 
 = LXI
@@ -1134,7 +1168,17 @@
   columns: (auto, auto),
   gutter: 3pt,
   rect[Pemberley was now Georgiana’s home; and the attachment of the sisters was exactly what Darcy had hoped to see. They were able to love each other, even as well as they intended. Georgiana had the highest opinion in the world of Elizabeth; though at first she often listened with an astonishment bordering on alarm, at her lively, sportive, manner of talking to her brother. He, who had always inspired in herself a respect which almost overcame her affection, she now saw the object of open pleasantry. Her mind received knowledge which had never before fallen in her way. By Elizabeth’s instructions she began to comprehend that a woman may take liberties with her husband, which a brother will not always allow in a sister more than ten years younger than himself.],
-  []
+  [attachment: 依恋\
+   astonishment: 惊讶\
+   bordering on: 接近于\
+   alarm: 警报\
+   lively: 活泼的\
+   sportive: 爱玩耍的\
+   pleasantry: 轻松愉快\
+   respect: 尊重\
+   overcome: 克服\
+   liberty: 自由\
+   allow in: 允许]
 )
 
 #grid(
@@ -1156,5 +1200,8 @@
   columns: (auto, auto),
   gutter: 3pt,
   rect[With the Gardiners, they were always on the most intimate terms. Darcy, as well as Elizabeth, really loved them; and they were both ever sensible of the warmest gratitude towards the persons who, by bringing her into Derbyshire, had been the means of uniting them.],
-  []
+  [sensible: 明智的\
+   gratitude: 感激\
+   means of: 通过\
+   uniting: 联合]
 )
