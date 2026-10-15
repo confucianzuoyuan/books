@@ -1,0 +1,776 @@
+% !TeX program = xelatex
+% 由扫描件人工逐行转录。每个 \BookLine 对应原书一行，可直接编辑。
+\documentclass[10pt]{article}
+\usepackage[paperwidth=140mm,paperheight=210mm,margin=16mm]{geometry}
+\usepackage{fontspec,xeCJK,graphicx,xcolor,tikz}
+\usepackage[absolute,overlay]{textpos}
+\usepackage[unicode,pdfpagelayout=TwoPageRight,pdftitle={阿尔刻提斯之歌（扫描部分重排）},pdfauthor={}]{hyperref}
+\setmainfont{Liberation Serif}
+\IfFileExists{/usr/local/share/fonts/f/FZShuSong_Z01_Regular.ttf}{
+  \setCJKmainfont{FZShuSong_Z01_Regular.ttf}[Path=/usr/local/share/fonts/f/]
+}{\setCJKmainfont{Noto Serif CJK SC}}
+\IfFileExists{/usr/local/share/fonts/f/FZKai_Z03_Regular.ttf}{
+  \newCJKfontfamily\kaifont{FZKai_Z03_Regular.ttf}[Path=/usr/local/share/fonts/f/]
+}{\newCJKfontfamily\kaifont{FangSong}}
+\IfFileExists{/usr/local/share/fonts/f/FZHei_B01_Regular.ttf}{
+  \newCJKfontfamily\heifont{FZHei_B01_Regular.ttf}[Path=/usr/local/share/fonts/f/]
+}{\newCJKfontfamily\heifont{Noto Sans CJK SC}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\TPHorizModule}{1mm}
+\setlength{\TPVertModule}{1mm}
+\textblockorigin{0mm}{0mm}
+\xeCJKsetup{PunctStyle=plain}
+\newsavebox{\rowbox}
+% y（毫米）, 缩进（毫米）, 字体, 是否铺满行, 文字。
+\newcommand{\BookLine}[5]{%
+  \begin{textblock*}{108mm}(16mm,#1mm)
+  \fontsize{10.5}{14}\selectfont #3%
+  \hspace*{#2mm}%
+  \begingroup
+  \ifnum#4=1 \renewcommand\CJKglue{\hskip 0pt plus 1fill}\fi
+  \sbox{\rowbox}{#5}%
+  \ifdim\wd\rowbox>\dimexpr108mm-#2mm\relax
+    \resizebox{\dimexpr108mm-#2mm\relax}{!}{\usebox{\rowbox}}%
+  \else
+    \ifnum#4=1
+      \makebox[\dimexpr108mm-#2mm\relax][s]{#5}%
+    \else\usebox{\rowbox}\fi
+  \fi
+  \endgroup
+  \end{textblock*}%
+}
+\newcommand{\Vertical}[5]{%
+  \begin{textblock*}{8mm}(#1mm,#2mm)
+    #3\fontsize{#4}{#5}\selectfont\centering
+}
+\newcommand{\EndVertical}{\end{textblock*}}
+\newcommand{\BookNumber}[1]{%
+  \begin{textblock*}{140mm}(0mm,192mm)
+  \centering\fontsize{12}{12}\selectfont\itshape #1
+  \end{textblock*}
+}
+\newcommand{\ActOrnament}[1][一]{%
+  \Vertical{66}{28}{}{14}{21}第\\#1\\幕\EndVertical
+  \begin{textblock*}{140mm}(0mm,63mm)
+    \centering\textcolor{black!65}{\fontsize{10}{10}\selectfont\textbullet}
+  \end{textblock*}
+  \begin{textblock*}{75mm}(38mm,96mm)
+  \begin{tikzpicture}[x=1mm,y=1mm,line width=.35pt,draw=black!65]
+    % 后方拱门。
+    \draw (16,0) -- (57,0) -- (57,39)
+      .. controls (57,48) and (53,55) .. (48,59);
+    \draw (16,0) -- (16,5);
+    % 前方拱门。
+    \draw (0,5) -- (48,5) -- (48,49)
+      arc[start angle=0,end angle=180,radius=24] -- cycle;
+    % 沿拱门上方逐字排出书名，不依赖扫描图。
+    \foreach \letter [count=\i from 0] in {T,h,e,A,l,c,e,s,t,i,a,d}{%
+      \pgfmathsetmacro{\a}{153-\i*11.45}
+      \node[rotate=\a-90,text=black!80,font=\fontsize{9}{9}\selectfont]
+        at ({24+35*cos(\a)},{49+35*sin(\a)}) {\letter};
+    }
+  \end{tikzpicture}
+  \end{textblock*}
+}
+\newcommand{\WorkOrnament}[1]{%
+  \Vertical{58}{26}{}{14}{21}#1\EndVertical
+  \begin{textblock*}{140mm}(0mm,63mm)
+    \centering\textcolor{black!65}{\fontsize{10}{10}\selectfont\textbullet}
+  \end{textblock*}
+  \begin{textblock*}{75mm}(38mm,96mm)
+  \begin{tikzpicture}[x=1mm,y=1mm,line width=.35pt,draw=black!65]
+    \draw (16,0) -- (57,0) -- (57,39) .. controls (57,48) and (53,55) .. (48,59);
+    \draw (16,0) -- (16,5);
+    \draw (0,5) -- (48,5) -- (48,49) arc[start angle=0,end angle=180,radius=24] -- cycle;
+    \foreach \letter [count=\i from 0] in {T,h,e,A,l,c,e,s,t,i,a,d}{%
+      \pgfmathsetmacro{\a}{153-\i*11.45}
+      \node[rotate=\a-90,text=black!80,font=\fontsize{9}{9}\selectfont]
+        at ({24+35*cos(\a)},{49+35*sin(\a)}) {\letter};
+    }
+  \end{tikzpicture}
+  \end{textblock*}
+}
+\begin{document}
+\null
+\newpage
+% 原书页码：227
+\null
+\WorkOrnament{醉\\酒\\的\\女\\神}
+\newpage
+% 原书页码：228
+\null
+\BookNumber{228}
+\Vertical{15}{28}{}{14}{21}人\\物\EndVertical
+\BookLine{112.00}{7.38}{\kaifont}{0}{克洛托——命运三女神之一}
+\BookLine{120.50}{7.38}{\kaifont}{0}{拉刻西斯——命运三女神之一}
+\BookLine{129.00}{7.38}{\kaifont}{0}{阿特洛波斯——命运三女神之一}
+\BookLine{137.50}{7.38}{\kaifont}{0}{阿波罗——太阳神}
+\newpage
+% 原书页码：229
+\null
+\BookNumber{229}
+\Vertical{15}{28}{}{14}{21}转\\场\EndVertical
+\BookLine{92.00}{7.38}{\kaifont}{0}{在《阿尔刻提斯之歌》的三幕戏结束后，幕布降下。阿波}
+\BookLine{100.50}{0.00}{\kaifont}{0}{罗走到幕前。}
+\BookLine{117.50}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{126.00}{22.14}{}{0}{{\kaifont （对观众）}等一下！等一下！还有一件事。我们}
+\BookLine{134.50}{22.14}{}{0}{现在是在希腊，在这里我们可不希望观众刚看}
+\BookLine{143.00}{22.14}{}{0}{完一个讲述人类艰难悲惨命运的故事就立刻回}
+\BookLine{151.50}{22.14}{}{0}{家。这里有个习俗：我们会要求诗人们写一出}
+\BookLine{160.00}{22.14}{}{0}{短小的羊人剧来娱乐大家，让大家发笑。{\kaifont （悄悄}}
+\BookLine{168.50}{22.14}{}{0}{{\kaifont 地）}我们认为悲剧视角不能单独存在，容易显}
+\BookLine{177.00}{22.14}{}{0}{得太过。就像你们中间有人{\kaifont （指着观众席）}说}
+\BookLine{185.50}{22.14}{}{0}{过：无论死亡或是阳光，都经不起人一再地凝}
+\newpage
+% 原书页码：230
+\null
+\BookNumber{230}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{22.14}{}{0}{视。以及，我们会要求这出羊人剧包含一些元}
+\BookLine{38.50}{22.14}{}{0}{素——关于之前这出戏的——一些其他的视}
+\BookLine{47.00}{22.14}{}{0}{角。所以——应该给大家演点什么呢？讲讲忒}
+\BookLine{55.50}{22.14}{}{0}{瑞西阿斯——那个六百岁的老头，被过分宠爱}
+\BookLine{64.00}{22.14}{}{0}{的老头？神明们时不时地让他变年轻，时不时}
+\BookLine{72.50}{22.14}{}{0}{地把他变成一个女人？还有宙斯和赫拉因为这}
+\BookLine{81.00}{22.14}{}{0}{个事情吵架？{\kaifont （笑了起来，不过努力控制着自}}
+\BookLine{89.50}{22.14}{}{0}{{\kaifont 己）}不，不——不太合适，太粗俗了。希腊人}
+\BookLine{98.00}{22.14}{}{0}{是能包含这种不太得体的故事的，不过{\kaifont （又无}}
+\BookLine{106.50}{22.14}{}{0}{{\kaifont 法自抑地笑了起来）}它是……不，不——不能}
+\BookLine{115.00}{22.14}{}{0}{在这儿演。要么我们讲讲阿尔刻提斯王后的姐}
+\BookLine{123.50}{22.14}{}{0}{妹？她的父亲佩利阿斯就是个蠢老头，两个姐}
+\BookLine{132.00}{22.14}{}{0}{姐也不太聪明。一个家总是这样——只能有一}
+\BookLine{140.50}{22.14}{}{0}{个聪明人。我们也可以讲讲美狄亚是怎么给这}
+\BookLine{149.00}{22.14}{}{0}{两个姐姐吹耳边风，假装告诉她们如何能使父}
+\BookLine{157.50}{22.14}{}{0}{亲返老还童……{\kaifont （突然改变了声调）}不！是有}
+\BookLine{166.00}{22.14}{}{0}{些人，只有听到残忍的事情才能笑出来。但这}
+\BookLine{174.50}{22.14}{}{0}{个故事残忍至极，等你们回到家，想起自己在}
+\newpage
+% 原书页码：231
+\null
+\BookNumber{231}
+\Vertical{129}{11}{}{7}{10}醉\\酒\\的\\女\\神\EndVertical
+\BookLine{30.00}{22.14}{}{0}{为这样的故事感到惊奇，也会挺羞愧的。还有}
+\BookLine{38.50}{22.14}{}{0}{一个故事：不算特别有趣。今晚看戏时你有没}
+\BookLine{47.00}{22.14}{}{0}{有好奇过，阿德墨托斯国王的生命是如何得到}
+\BookLine{55.50}{22.14}{}{0}{延续的？那几个厉害的女人，行事怪异的姐妹，}
+\BookLine{64.00}{22.14}{}{0}{命运三女神——她们也会被骗吗？我们来讲讲}
+\BookLine{72.50}{22.14}{}{0}{这件事是如何发生的。}
+\BookLine{89.50}{7.38}{\kaifont}{0}{他脱掉外面的长袍，里面是一身后厨小伙计的打扮，他}
+\BookLine{98.00}{0.00}{\kaifont}{0}{冲着台侧喊着：“我的帽子！帽子！”}
+\BookLine{115.00}{22.14}{}{0}{在这出小戏里，我还是阿波罗，不过假扮成了}
+\BookLine{123.50}{22.14}{}{0}{一个后厨的小伙计。}
+\BookLine{140.50}{7.38}{\kaifont}{0}{从台侧递出来一顶锥形草帽和一条腰带，腰带上挂着洋}
+\BookLine{149.00}{0.00}{\kaifont}{0}{葱之类的东西——表示这是个在厨房干活的伙计。他又冲着}
+\BookLine{157.50}{0.00}{\kaifont}{0}{台侧喊：“我的木壶！”一边喊一边戴上帽子，系上腰带。}
+\newpage
+% 原书页码：232
+\null
+\BookNumber{232}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{38.50}{22.14}{}{0}{我讨厌乔装打扮，讨厌喝醉酒的人——}
+\BookLine{55.50}{7.38}{\kaifont}{0}{从台侧递出来一根绳子，上面挂着三只壶。}
+\BookLine{72.50}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{81.00}{22.14}{}{0}{看到我脖子上挂的这几个壶了吗？我讨厌撒谎，}
+\BookLine{89.50}{22.14}{}{0}{讨厌耍花招——但是我要耍花招去干的这件事}
+\BookLine{98.00}{22.14}{}{0}{情，就算是全能的宙斯来，也只能靠骗：我要}
+\BookLine{106.50}{22.14}{}{0}{去延长一个人的生命。}
+\BookLine{123.50}{7.38}{\kaifont}{0}{他朝着幕布后方或是台侧喊道：“都准备好了吗？”又转}
+\BookLine{132.00}{0.00}{\kaifont}{0}{过身来对着观众。}
+\BookLine{149.00}{22.14}{}{0}{好了，羊人剧的表演准备开始，为这出严肃的}
+\BookLine{157.50}{22.14}{}{0}{三幕剧《阿尔刻提斯之歌》收尾。}
+\BookLine{174.50}{7.38}{\kaifont}{0}{幕布升起，他依然站在舞台前侧的柱子旁边。}
+\newpage
+% 原书页码：233
+\null
+\BookNumber{233}
+\Vertical{129}{11}{}{7}{10}醉\\酒\\的\\女\\神\EndVertical
+\BookLine{30.00}{7.38}{\kaifont}{0}{三位命运女神正坐在一张长凳上，凳子被宽大的褶摆所}
+\BookLine{38.50}{0.00}{\kaifont}{0}{覆盖。她们戴着老妇人的面具，风格怪诞却不失威严。克洛}
+\BookLine{47.00}{0.00}{\kaifont}{0}{托拿着纺锤，拉刻西斯腿上放着生命之线，阿特洛波斯拿着}
+\BookLine{55.50}{0.00}{\kaifont}{0}{剪刀。道具设计要让每一样工具都显得很大，接近两腿之宽。}
+\BookLine{64.00}{0.00}{\kaifont}{0}{她们工作时身体前后晃动着，从右至左传递着生命之线。观}
+\BookLine{72.50}{0.00}{\kaifont}{0}{众看着她们沉默了好一阵子，只有克洛托偶尔轻声哼两句。}
+\BookLine{89.50}{0.00}{\heifont}{0}{克洛托：}
+\BookLine{98.00}{22.14}{}{0}{什么东西，出生的时候四条腿，后来变成两条}
+\BookLine{106.50}{22.14}{}{0}{腿？别说！别说！}
+\BookLine{123.50}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{132.00}{22.14}{}{0}{{\kaifont （无聊）}你知道答案！}
+\BookLine{149.00}{0.00}{\heifont}{0}{克洛托：}
+\BookLine{157.50}{22.14}{}{0}{让我假装一下我不知道。}
+\newpage
+% 原书页码：234
+\null
+\BookNumber{234}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{38.50}{22.14}{}{0}{没有新谜语了。咱们全都猜过了。}
+\BookLine{55.50}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{64.00}{22.14}{}{0}{没有谜语的人生真无聊！克洛托，你想一个}
+\BookLine{72.50}{22.14}{}{0}{谜语。}
+\BookLine{89.50}{0.00}{\heifont}{0}{克洛托：}
+\BookLine{98.00}{22.14}{}{0}{安静，等等，给我一分钟想一想……那是什}
+\BookLine{106.50}{22.14}{}{0}{么……那是什么？}
+\BookLine{123.50}{7.38}{\kaifont}{0}{乔装打扮的阿波罗上场。}
+\BookLine{140.50}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{149.00}{22.14}{}{0}{{\kaifont （对观众）}这就是伟大的三姐妹——命运女神。}
+\BookLine{157.50}{22.14}{}{0}{克洛托编织生命之线，拉刻西斯丈量每一根线}
+\BookLine{166.00}{22.14}{}{0}{的长度，阿特洛波斯把它们剪断。这份决定我}
+\BookLine{174.50}{22.14}{}{0}{们命运的工作千篇一律，她们干得非常无聊，}
+\newpage
+% 原书页码：235
+\null
+\BookNumber{235}
+\Vertical{129}{11}{}{7}{10}醉\\酒\\的\\女\\神\EndVertical
+\BookLine{30.00}{22.14}{}{0}{就像其他无聊的人一样，她们也通过游戏取}
+\BookLine{38.50}{22.14}{}{0}{乐——解谜题，猜谜语。她们也不能玩牌，因}
+\BookLine{47.00}{22.14}{}{0}{为双手都被命运之线的工作给占着。}
+\BookLine{64.00}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{72.50}{22.14}{}{0}{姐姐！你的胳膊！你干活儿的时候别撞我呀。}
+\BookLine{89.50}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{98.00}{22.14}{}{0}{没办法——线太太太长了！我没遇到过这么长}
+\BookLine{106.50}{22.14}{}{0}{的线。}
+\BookLine{123.50}{0.00}{\heifont}{0}{克洛托：}
+\BookLine{132.00}{22.14}{}{0}{又长，颜色又暗，又脏兮兮的！这么多年就是}
+\BookLine{140.50}{22.14}{}{0}{个奴隶！}
+\BookLine{157.50}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{166.00}{22.14}{}{0}{是啊！{\kaifont （对阿特洛波斯）}剪了吧，妹妹。{\kaifont （阿特}}
+\BookLine{174.50}{22.14}{}{0}{{\kaifont 洛波斯剪线——咔！）}这个，剪了。这条是蓝}
+\newpage
+% 原书页码：236
+\null
+\BookNumber{236}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{22.14}{}{0}{线——蓝线代表勇敢；很勇敢，很短暂。}
+\BookLine{47.00}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{55.50}{22.14}{}{0}{看得出来！{\kaifont （咔）}}
+\BookLine{72.50}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{81.00}{22.14}{}{0}{你差点剪到那条紫色的线，阿特洛波斯。}
+\BookLine{98.00}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{106.50}{22.14}{}{0}{这条？紫色是代表国王？}
+\BookLine{123.50}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{132.00}{22.14}{}{0}{是的，你干活儿的时候小心点，亲爱的。这是}
+\BookLine{140.50}{22.14}{}{0}{塞萨利国王阿德墨托斯的生命线。}
+\BookLine{157.50}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{166.00}{22.14}{}{0}{{\kaifont （在一旁）}哎呀！}
+\newpage
+% 原书页码：237
+\null
+\BookNumber{237}
+\Vertical{129}{11}{}{7}{10}醉\\酒\\的\\女\\神\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{38.50}{22.14}{}{0}{我标记得很清楚。他日落的时候就会死去。}
+\BookLine{55.50}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{64.00}{22.14}{}{0}{{\kaifont （对观众）}不！不！}
+\BookLine{81.00}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{89.50}{22.14}{}{0}{那塞萨利可要满城哀号了。大地震动，人们撕}
+\BookLine{98.00}{22.14}{}{0}{碎衣裳……不是现在，亲爱的。还有一个小}
+\BookLine{106.50}{22.14}{}{0}{时呢。}
+\BookLine{123.50}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{132.00}{22.14}{}{0}{{\kaifont （在一旁）}做点什么！快做点什么，伪装着阿}
+\BookLine{140.50}{22.14}{}{0}{波罗！}
+\BookLine{157.50}{7.38}{\kaifont}{0}{他做出疯狂奔跑的动作，但人仍在原地。他突然停下来，}
+\BookLine{166.00}{0.00}{\kaifont}{0}{对观众说话。}
+\newpage
+% 原书页码：238
+\null
+\BookNumber{238}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{22.14}{}{0}{在场的有谁没听过那个故事——为什么我那么}
+\BookLine{38.50}{22.14}{}{0}{喜欢阿德墨托斯国王和阿尔刻提斯王后？}
+\BookLine{55.50}{7.38}{\kaifont}{0}{他坐到地上，伸出自己的食指，继续说着。}
+\BookLine{72.50}{22.14}{}{0}{是十年以前吧？我对时间没什么概念，我是太}
+\BookLine{81.00}{22.14}{}{0}{阳神，走到哪里哪里就是白天。差不多是十年}
+\BookLine{89.50}{22.14}{}{0}{前，我的父亲，咱们大家的父亲，对我非常生}
+\BookLine{98.00}{22.14}{}{0}{气。我干了什么吗？}
+\BookLine{115.00}{7.38}{\kaifont}{0}{他来回摆弄着手指。}
+\BookLine{132.00}{22.14}{}{0}{先别问这个，就忘了吧……总之，他对我降下}
+\BookLine{140.50}{22.14}{}{0}{了一个惩罚。他命令我到地上来，在人类当中}
+\BookLine{149.00}{22.14}{}{0}{生活一年。——我，作为一个普通人，一个仆}
+\BookLine{157.50}{22.14}{}{0}{人。我选择了到塞萨利去，成为阿德墨托斯国}
+\BookLine{166.00}{22.14}{}{0}{王的牧人。我半隐藏了自己的身份，大家知道}
+\BookLine{174.50}{22.14}{}{0}{点什么，但也不太清楚。我就像一个普通人一}
+\newpage
+% 原书页码：239
+\null
+\BookNumber{239}
+\Vertical{129}{11}{}{7}{10}醉\\酒\\的\\女\\神\EndVertical
+\BookLine{30.00}{22.14}{}{0}{样生活，在他们身边，就像此刻在你们身边，}
+\BookLine{38.50}{22.14}{}{0}{在公义的人身边，也在不义的人身边。每一天，}
+\BookLine{47.00}{22.14}{}{0}{国王都会对我和其他牧人下指令，每一天，王}
+\BookLine{55.50}{22.14}{}{0}{后也会关心我们的生活是否顺利，家人是否安}
+\BookLine{64.00}{22.14}{}{0}{好。我渐渐喜欢上了阿德墨托斯国王和阿尔刻}
+\BookLine{72.50}{22.14}{}{0}{提斯王后，因为他们，我渐渐喜欢上了人类。}
+\BookLine{81.00}{22.14}{}{0}{现在阿德墨托斯要死了。{\kaifont （起身）}不行！我有我}
+\BookLine{89.50}{22.14}{}{0}{的计划，我要阻止这件事情，要做点什么。做}
+\BookLine{98.00}{22.14}{}{0}{点什么，伪装者阿波罗。}
+\BookLine{115.00}{7.38}{\kaifont}{0}{他又开始在原地疯狂跑步，大声地抱怨着。}
+\BookLine{132.00}{22.14}{}{0}{哦，我的后背！哎呀，哎呀。他们打我，更惨}
+\BookLine{140.50}{22.14}{}{0}{的是我要迟到了，我又要挨打了。}
+\BookLine{157.50}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{166.00}{22.14}{}{0}{这个哭哭啼啼的人是谁？}
+\newpage
+% 原书页码：240
+\null
+\BookNumber{240}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{38.50}{22.14}{}{0}{别拦着我，我都没有机会说说话。我已经迟到}
+\BookLine{47.00}{22.14}{}{0}{了，而且，我的差事还是个秘密，什么都不}
+\BookLine{55.50}{22.14}{}{0}{能说。}
+\BookLine{72.50}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{81.00}{22.14}{}{0}{拉刻西斯，用你的线把他围住。这个傻子能有}
+\BookLine{89.50}{22.14}{}{0}{什么秘密？我们才是知道所有秘密的人。}
+\BookLine{106.50}{7.38}{\kaifont}{0}{放在三姐妹腿上的线，观众是看不到的。拉刻西斯站了}
+\BookLine{115.00}{0.00}{\kaifont}{0}{起来，她的手在头顶挥舞转了三个大圈，像是要丢出一个套}
+\BookLine{123.50}{0.00}{\kaifont}{0}{索，随即套索圈住了舞台上的东西。阿波罗摆出被捉住的姿}
+\BookLine{132.00}{0.00}{\kaifont}{0}{势。拉刻西斯每次用力一拉，阿波罗就被拽得离她更近。在}
+\BookLine{140.50}{0.00}{\kaifont}{0}{接下来的一段台词中，拉刻西斯把线的另一头举在空中，一}
+\BookLine{149.00}{0.00}{\kaifont}{0}{会儿把阿波罗高高抬起来，几乎要勒死他，一会儿又把他摔}
+\BookLine{157.50}{0.00}{\kaifont}{0}{在地上。}
+\newpage
+% 原书页码：241
+\null
+\BookNumber{241}
+\Vertical{129}{11}{}{7}{10}醉\\酒\\的\\女\\神\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{38.50}{22.14}{}{0}{夫人们，美丽的夫人们，放过我吧。要是我迟}
+\BookLine{47.00}{22.14}{}{0}{到的话，整个奥林匹斯山都要闹起来了。阿佛}
+\BookLine{55.50}{22.14}{}{0}{洛狄忒会担心得发疯的——哦，我说得太多}
+\BookLine{64.00}{22.14}{}{0}{了。我的任务是立刻前往，什么都别说——尤}
+\BookLine{72.50}{22.14}{}{0}{其是不要和女人说。这件事男人不会感兴趣。}
+\BookLine{81.00}{22.14}{}{0}{夫人们，放我走吧。}
+\BookLine{98.00}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{106.50}{22.14}{}{0}{姐姐，把你的线拽紧。}
+\BookLine{123.50}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{132.00}{22.14}{}{0}{我要窒息了，你要把我勒死了。}
+\BookLine{149.00}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{157.50}{22.14}{}{0}{{\kaifont （强迫他）}别发牢骚了，现在就把你的秘密说}
+\BookLine{166.00}{22.14}{}{0}{出来。}
+\newpage
+% 原书页码：242
+\null
+\BookNumber{242}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{38.50}{22.14}{}{0}{我不能说。我不敢。}
+\BookLine{55.50}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{64.00}{22.14}{}{0}{再紧一点，姐姐。孩子，要么说秘密，要么就}
+\BookLine{72.50}{22.14}{}{0}{窒息。{\kaifont （做把他勒住的手势）}}
+\BookLine{89.50}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{98.00}{22.14}{}{0}{噢！噢！等一下！你们要是能放我走，我说}
+\BookLine{106.50}{22.14}{}{0}{一半。}
+\BookLine{123.50}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{132.00}{22.14}{}{0}{全说出来，要么我们就把你挂在这根绳子上。}
+\BookLine{149.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{157.50}{22.14}{}{0}{我说，我说。不过——{\kaifont （担忧地看看自己）}你们}
+\BookLine{166.00}{22.14}{}{0}{发誓，指着冥河起誓，你们不会告诉任何人，}
+\BookLine{174.50}{22.14}{}{0}{指着遗忘河起誓，你们会把它忘掉。}
+\newpage
+% 原书页码：243
+\null
+\BookNumber{243}
+\Vertical{129}{11}{}{7}{10}醉\\酒\\的\\女\\神\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{38.50}{22.14}{}{0}{我们只有一种誓言——指着黄泉起誓。不过我}
+\BookLine{47.00}{22.14}{}{0}{们不会发誓的——更何况是为你一个哭哭啼啼的}
+\BookLine{55.50}{22.14}{}{0}{小奴隶。你现在就把知道的事情告诉我们，否}
+\BookLine{64.00}{22.14}{}{0}{则你立刻就能见到这几条河。}
+\BookLine{81.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{89.50}{22.14}{}{0}{我害怕，我真的是不敢说。我……嗯……我}
+\BookLine{98.00}{22.14}{}{0}{带着……来的……那些瓶子……哦，夫人们，}
+\BookLine{106.50}{22.14}{}{0}{放我走吧，放我走吧。}
+\BookLine{123.50}{0.00}{\heifont}{0}{克洛托和阿特洛波斯：}
+\BookLine{132.00}{22.14}{}{0}{使劲拉，姐姐。}
+\BookLine{149.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{157.50}{22.14}{}{0}{不要！不要！我说！我带的酒是要送给……送}
+\BookLine{166.00}{22.14}{}{0}{给阿佛洛狄忒。每十天她就要喝这些酒……来}
+\BookLine{174.50}{22.14}{}{0}{恢复自己的美貌。}
+\newpage
+% 原书页码：244
+\null
+\BookNumber{244}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{38.50}{22.14}{}{0}{骗子！傻子！她喝神仙的酒，吃神仙的食物，}
+\BookLine{47.00}{22.14}{}{0}{和大家都一样。}
+\BookLine{64.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{72.50}{22.14}{}{0}{{\kaifont （悄悄地）}但她却是最美的？……这是赫菲斯}
+\BookLine{81.00}{22.14}{}{0}{托斯的礼物，来自狄奥尼索斯的葡萄园，这些}
+\BookLine{89.50}{22.14}{}{0}{酿酒的葡萄是在阿波罗的注视下成熟的——那}
+\BookLine{98.00}{22.14}{}{0}{位从不说谎的阿波罗。}
+\BookLine{115.00}{0.00}{\heifont}{0}{三姐妹：}
+\BookLine{123.50}{22.14}{}{0}{{\kaifont （心照不宣地，带着雀跃的期待）}姐妹们！}
+\BookLine{140.50}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{149.00}{22.14}{}{0}{{\kaifont （甜甜地）}好孩子，把那些瓶子拿过来。}
+\BookLine{166.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{174.50}{22.14}{}{0}{{\kaifont （害怕地）}这可不行！夫人！我已经把秘密都告}
+\newpage
+% 原书页码：245
+\null
+\BookNumber{245}
+\Vertical{129}{11}{}{7}{10}醉\\酒\\的\\女\\神\EndVertical
+\BookLine{30.00}{22.14}{}{0}{诉你们了！这可不行！}
+\BookLine{47.00}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{55.50}{22.14}{}{0}{拉刻西斯，你肯定，能从那堆线里面找到这个}
+\BookLine{64.00}{22.14}{}{0}{不值一提的奴隶的生命线吧——一根黄色的长}
+\BookLine{72.50}{22.14}{}{0}{长的线？}
+\BookLine{89.50}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{98.00}{22.14}{}{0}{{\kaifont （跪在地上）}饶了我吧！}
+\BookLine{115.00}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{123.50}{22.14}{}{0}{{\kaifont （对拉刻西斯）}看，就在这儿——土黄土黄的，}
+\BookLine{132.00}{22.14}{}{0}{因为不诚实，所以缠成一坨；因为固执，所以}
+\BookLine{140.50}{22.14}{}{0}{线很硬；因为愚蠢，所以粗细不均。亲爱的，}
+\BookLine{149.00}{22.14}{}{0}{把线递给我。}
+\BookLine{166.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{174.50}{22.14}{}{0}{{\kaifont （前额贴着地面）}哦，真希望我从没有出}
+\newpage
+% 原书页码：246
+\null
+\BookNumber{246}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{22.14}{}{0}{生过！}
+\BookLine{47.00}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{55.50}{22.14}{}{1}{{\kaifont （递给阿特洛波斯）}给。{\kaifont （打了个手势）}我本来是}
+\BookLine{64.00}{22.14}{}{0}{想给剪成五段的。}
+\BookLine{81.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{89.50}{22.14}{}{0}{{\kaifont （起身，把酒瓶递给她们，啜泣着）}给，你们拿}
+\BookLine{98.00}{22.14}{}{0}{走！都拿走！反正我怎么都是死。阿佛洛狄忒}
+\BookLine{106.50}{22.14}{}{0}{也会杀了我的，我的命就这么长了。}
+\BookLine{123.50}{7.38}{\kaifont}{0}{三姐妹拿起瓶子，态度强硬。}
+\BookLine{140.50}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{149.00}{22.14}{}{0}{一个字都别说了。把嘴闭上，我们不想听你说}
+\BookLine{157.50}{22.14}{}{0}{话了。}
+\BookLine{174.50}{7.38}{\kaifont}{0}{阿波罗身上的绳索被松开，他头朝地摔下来，肩膀撞}
+\BookLine{183.00}{0.00}{\kaifont}{0}{到地上。三姐妹对着酒壶喝了起来，她们一边喝一边开心地}
+\BookLine{191.50}{0.00}{\kaifont}{0}{喊着。}
+\newpage
+% 原书页码：247
+\null
+\BookNumber{247}
+\Vertical{129}{11}{}{7}{10}醉\\酒\\的\\女\\神\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{三姐妹：}
+\BookLine{38.50}{22.14}{}{0}{姐妹们！}
+\BookLine{55.50}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{64.00}{22.14}{}{0}{妹妹，我看起来怎么样？}
+\BookLine{81.00}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{89.50}{22.14}{}{0}{噢，我简直想吃了你，我呢？}
+\BookLine{106.50}{0.00}{\heifont}{0}{克洛托：}
+\BookLine{115.00}{22.14}{}{0}{姐姐，我看着怎么样？}
+\BookLine{132.00}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{140.50}{22.14}{}{0}{美！太美了！我呢？}
+\newpage
+% 原书页码：248
+\null
+\BookNumber{248}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{38.50}{22.14}{}{0}{可惜这山上一面镜子都没有，一小片水池也没}
+\BookLine{47.00}{22.14}{}{0}{有，没法让我们知道谁是最美的。}
+\BookLine{64.00}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{72.50}{22.14}{}{0}{{\kaifont （做梦一般，把手放在自己的脸上）}我感觉……}
+\BookLine{81.00}{22.14}{}{0}{克罗诺斯在追我，要在一个黑暗的角落把我}
+\BookLine{89.50}{22.14}{}{0}{抓住。}
+\BookLine{106.50}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{115.00}{22.14}{}{0}{波塞冬要发疯了——在大陆上横冲直撞，想要}
+\BookLine{123.50}{22.14}{}{0}{把我吞掉。}
+\BookLine{140.50}{0.00}{\heifont}{0}{克洛托：}
+\BookLine{149.00}{22.14}{}{0}{我自己的父亲——谁又能怪他呢？——他已}
+\BookLine{157.50}{22.14}{}{0}{经不是他自己。}
+\newpage
+% 原书页码：249
+\null
+\BookNumber{249}
+\Vertical{129}{11}{}{7}{10}醉\\酒\\的\\女\\神\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{38.50}{22.14}{}{0}{{\kaifont （轻声地）}他也不是一点用处都没有。而且，他}
+\BookLine{47.00}{22.14}{}{0}{也不丑。{\kaifont （对克洛托）}问问他，他看到了什么。}
+\BookLine{64.00}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{72.50}{22.14}{}{0}{问问他，我们之中谁是最美的。}
+\BookLine{89.50}{0.00}{\heifont}{0}{克洛托：}
+\BookLine{98.00}{22.14}{}{0}{孩子！孩子！你说话可以。我是说，你……你}
+\BookLine{106.50}{22.14}{}{0}{可以喙{\kaifont （说）}。拉刻塞{\kaifont （拉刻西）}斯，你跟他说}
+\BookLine{115.00}{22.14}{}{0}{{\kaifont （说）}，我涩头{\kaifont （舌头）}不好使了。}
+\BookLine{132.00}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{140.50}{22.14}{}{0}{孩子，你看看我们！你来说说，谁是最美的。}
+\BookLine{157.50}{7.38}{\kaifont}{0}{阿波罗一直脸朝着地面，他站起身来，盯着三姐妹看了}
+\BookLine{166.00}{0.00}{\kaifont}{0}{看。他表现得好像自己要瞎了一样，捂住眼睛又松开手，盯}
+\BookLine{174.50}{0.00}{\kaifont}{0}{着她们每个人看了半天。}
+\newpage
+% 原书页码：250
+\null
+\BookNumber{250}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{38.50}{22.14}{}{0}{我干了什么呀？这些美丽的光辉！我干了什}
+\BookLine{47.00}{22.14}{}{0}{么？——你——还有你——还有你！如果你们}
+\BookLine{55.50}{22.14}{}{0}{想，就杀了我吧，但我真的说不出来你们哪一}
+\BookLine{64.00}{22.14}{}{0}{位更美。{\kaifont （跪在地上）}哦，夫人们——如果更}
+\BookLine{72.50}{22.14}{}{0}{多的美貌并没有让你们变得更加残忍，那就放}
+\BookLine{81.00}{22.14}{}{0}{我走吧，让我躲起来。阿佛洛狄忒肯定会知道}
+\BookLine{89.50}{22.14}{}{0}{这件事。让我逃回克里特去，回去做我从前的}
+\BookLine{98.00}{22.14}{}{0}{工作。}
+\BookLine{115.00}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{123.50}{22.14}{}{0}{好孩子，你以前是做什么的？}
+\BookLine{140.50}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{149.00}{22.14}{}{0}{我在集市上跟我父亲一起工作，我讲故事，说}
+\BookLine{157.50}{22.14}{}{0}{谜语。}
+\BookLine{174.50}{7.38}{\kaifont}{0}{三姐妹惊呆了，她们简直要尖叫起来。}
+\newpage
+% 原书页码：251
+\null
+\BookNumber{251}
+\Vertical{129}{11}{}{7}{10}醉\\酒\\的\\女\\神\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{三姐妹：}
+\BookLine{38.50}{22.14}{}{0}{什么？你刚才说什么？}
+\BookLine{55.50}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{64.00}{22.14}{}{0}{讲故事，说谜语。美丽的夫人们也喜欢谜}
+\BookLine{72.50}{22.14}{}{0}{语吗？}
+\BookLine{89.50}{0.00}{\heifont}{0}{三姐妹：}
+\BookLine{98.00}{22.14}{}{0}{{\kaifont （来回摇晃着身体，互相拍打着对方）}姐妹们，}
+\BookLine{106.50}{22.14}{}{0}{我们喜欢谜语吗？}
+\BookLine{123.50}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{132.00}{22.14}{}{0}{哦，他知道的也就是那些老谜语了。噢！跛了}
+\BookLine{140.50}{22.14}{}{0}{的马……大脚趾……}
+\BookLine{157.50}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{166.00}{22.14}{}{0}{天上的云……赫拉的眼睫毛……}
+\newpage
+% 原书页码：252
+\null
+\BookNumber{252}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{克洛托：}
+\BookLine{38.50}{22.14}{}{0}{{\kaifont （喋喋不休）}什么东西，出生的时候四条腿？}
+\BookLine{55.50}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{64.00}{22.14}{}{0}{海豚……埃奇纳……}
+\BookLine{81.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{89.50}{22.14}{}{0}{这些大家都知道了！我有一些新的谜语——}
+\BookLine{106.50}{0.00}{\heifont}{0}{三姐妹：}
+\BookLine{115.00}{22.14}{}{0}{{\kaifont （又一次尖叫）}新谜语！}
+\BookLine{132.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{140.50}{22.14}{}{0}{{\kaifont （缓缓地）}是什么必须——}
+\BookLine{157.50}{7.38}{\kaifont}{0}{他停了下来，三姐妹完全被他吸引住了。}
+\newpage
+% 原书页码：253
+\null
+\BookNumber{253}
+\Vertical{129}{11}{}{7}{10}醉\\酒\\的\\女\\神\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{38.50}{22.14}{}{0}{然后，孩子，然后。是什么必须——}
+\BookLine{55.50}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{64.00}{22.14}{}{0}{不过——要有赏罚我才玩。这样！如果我}
+\BookLine{72.50}{22.14}{}{0}{输了……}
+\BookLine{89.50}{0.00}{\heifont}{0}{克洛托：}
+\BookLine{98.00}{22.14}{}{0}{如果你酥{\kaifont （输）}了，你必西{\kaifont （须）}告诉{\kaifont （诉）}我}
+\BookLine{106.50}{22.14}{}{0}{们，谁四{\kaifont （是）}最美滴{\kaifont （的）}。}
+\BookLine{123.50}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{132.00}{22.14}{}{0}{不！不！我不敢！}
+\BookLine{149.00}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{157.50}{22.14}{}{0}{{\kaifont （尖声地）}你必须！}
+\newpage
+% 原书页码：254
+\null
+\BookNumber{254}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{38.50}{22.14}{}{0}{要是我赢了呢？}
+\BookLine{55.50}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{64.00}{22.14}{}{0}{赢？白痴！蠢货！奴才！没人赢过我们！}
+\BookLine{81.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{89.50}{22.14}{}{0}{但是，要是我赢了呢？}
+\BookLine{106.50}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{115.00}{22.14}{}{0}{他知不知道我们是谁！}
+\BookLine{132.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{140.50}{22.14}{}{0}{但是，要是我赢了呢？}
+\BookLine{157.50}{0.00}{\heifont}{0}{克洛托：}
+\BookLine{166.00}{22.14}{}{0}{这个傻子还敢嗦{\kaifont （说）}赢！}
+\newpage
+% 原书页码：255
+\null
+\BookNumber{255}
+\Vertical{129}{11}{}{7}{10}醉\\酒\\的\\女\\神\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{38.50}{22.14}{}{0}{要是我赢了，你们必须满足我一个愿望。一个}
+\BookLine{47.00}{22.14}{}{0}{愿望，随便什么愿望。}
+\BookLine{64.00}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{72.50}{22.14}{}{0}{行，行啊。哦，你可真无聊！快说谜语吧，是}
+\BookLine{81.00}{22.14}{}{0}{什么必须——}
+\BookLine{98.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{106.50}{22.14}{}{0}{指着黄泉起誓！}
+\BookLine{123.50}{0.00}{\heifont}{0}{克洛托和拉刻西斯：}
+\BookLine{132.00}{22.14}{}{0}{我发誓！指着黄泉起誓！指着黄泉起誓！}
+\BookLine{149.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{157.50}{22.14}{}{0}{{\kaifont （对阿特洛波斯）}你也发誓。}
+\newpage
+% 原书页码：256
+\null
+\BookNumber{256}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{38.50}{22.14}{}{0}{{\kaifont （思考了一下，大声地）}指着黄泉起誓！}
+\BookLine{55.50}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{64.00}{22.14}{}{0}{那么，准备好了吗？}
+\BookLine{81.00}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{89.50}{22.14}{}{0}{等一下！一下。{\kaifont （靠近阿特洛波斯，悄悄地）}太}
+\BookLine{98.00}{22.14}{}{0}{阳快落山了。你别忘了阿德——你知道，生命}
+\BookLine{106.50}{22.14}{}{0}{线，阿德——}
+\BookLine{123.50}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{132.00}{22.14}{}{0}{什么？什么阿德？你在嘀嘀咕咕什么呢，}
+\BookLine{140.50}{22.14}{}{0}{傻子？}
+\BookLine{157.50}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{166.00}{22.14}{}{0}{{\kaifont （大声）}你别忘了塞萨利国王，阿德墨托斯的生}
+\BookLine{174.50}{22.14}{}{0}{命线。日落时分，阿特洛波斯，你是聋了吗？}
+\newpage
+% 原书页码：257
+\null
+\BookNumber{257}
+\Vertical{129}{11}{}{7}{10}醉\\酒\\的\\女\\神\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{38.50}{22.14}{}{0}{噢，你别再啰里啰唆了，管好你自己的事吧。}
+\BookLine{47.00}{22.14}{}{0}{我当然没聋！孩子，接着说你的谜语！}
+\BookLine{64.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{72.50}{22.14}{}{0}{好！你们的猜谜时间，就是背诵缪斯女神和她}
+\BookLine{81.00}{22.14}{}{0}{们母亲姓名的时间。}
+\BookLine{98.00}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{106.50}{22.14}{}{0}{嗯！九位女神，一位母亲。行，开始！}
+\BookLine{123.50}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{132.00}{22.14}{}{0}{对每个生命来说都是必须——却只能拯救其中}
+\BookLine{140.50}{22.14}{}{0}{之一，是什么？}
+\BookLine{157.50}{7.38}{\kaifont}{0}{三姐妹闭上眼睛前后摇晃着身体，嘴里嘟囔着谜题。阿}
+\BookLine{166.00}{0.00}{\kaifont}{0}{波罗突然开始向缪斯女神们唱起祈祷的歌谣来。}
+\newpage
+% 原书页码：258
+\null
+\BookNumber{258}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{38.50}{22.14}{}{0}{摩涅莫绪涅，九女神的母亲；}
+\BookLine{47.00}{22.14}{}{0}{波吕许谟尼亚，众神的香气——}
+\BookLine{64.00}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{72.50}{22.14}{}{0}{{\kaifont （尖叫道）}别唱了！这不公平！你这样我们怎么}
+\BookLine{81.00}{22.14}{}{0}{思考？}
+\BookLine{98.00}{0.00}{\heifont}{0}{克洛托：}
+\BookLine{106.50}{22.14}{}{0}{姐姐，你把耳朵捂上啊。}
+\BookLine{123.50}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{132.00}{22.14}{}{0}{不公平！{\kaifont （嘀囔着）}对每个生命来说都是}
+\BookLine{140.50}{22.14}{}{0}{必须——}
+\BookLine{157.50}{7.38}{\kaifont}{0}{她们把手指插进耳朵里。}
+\newpage
+% 原书页码：259
+\null
+\BookNumber{259}
+\Vertical{129}{11}{}{7}{10}醉\\酒\\的\\女\\神\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{38.50}{22.14}{}{0}{埃拉托，爱的声音；}
+\BookLine{47.00}{22.14}{}{0}{欧忒耳珀，请帮助我。}
+\BookLine{55.50}{22.14}{}{0}{卡利俄珀，灵魂的窃贼；}
+\BookLine{64.00}{22.14}{}{0}{乌拉尼亚，被众星包裹；}
+\BookLine{72.50}{22.14}{}{0}{克利俄，回望的目光；}
+\BookLine{81.00}{22.14}{}{0}{欧忒耳珀，请帮助我。}
+\BookLine{89.50}{22.14}{}{0}{忒耳西科瑞，美丽脚踝的守护者；}
+\BookLine{98.00}{22.14}{}{0}{塔利亚，带来漫长的欢乐；}
+\BookLine{106.50}{22.14}{}{0}{墨尔波墨涅，令人害怕却也喜爱；}
+\BookLine{115.00}{22.14}{}{0}{欧忒耳珀，请帮助我。}
+\BookLine{123.50}{22.14}{}{0}{{\kaifont （突然大声地）}惩罚！惩罚！}
+\BookLine{140.50}{7.38}{\kaifont}{0}{克洛托和阿特洛波斯将脸埋在拉刻西斯的肩上，抱怨}
+\BookLine{149.00}{0.00}{\kaifont}{0}{叹息。}
+\BookLine{166.00}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{174.50}{22.14}{}{0}{{\kaifont （有气无力）}答案是什么？}
+\newpage
+% 原书页码：260
+\null
+\BookNumber{260}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{38.50}{22.14}{}{0}{{\kaifont （把帽子丢在一边，带着胜利的语气）}是我！太}
+\BookLine{47.00}{22.14}{}{0}{阳神阿波罗！}
+\BookLine{64.00}{0.00}{\heifont}{0}{三姐妹：}
+\BookLine{72.50}{22.14}{}{0}{阿波罗！是你？}
+\BookLine{89.50}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{98.00}{22.14}{}{0}{{\kaifont （十分生气）}呸！你能救谁的命？}
+\BookLine{115.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{123.50}{22.14}{}{0}{我赢得的！我的愿望！一个人的性命！塞萨利}
+\BookLine{132.00}{22.14}{}{0}{之王，阿德墨托斯的性命。}
+\BookLine{149.00}{7.38}{\kaifont}{0}{三姐妹之中爆发了一阵令人害怕的喧闹声。}
+\BookLine{166.00}{0.00}{\heifont}{0}{三姐妹：}
+\BookLine{174.50}{22.14}{}{0}{骗子！不可能！这你别想了！}
+\newpage
+% 原书页码：261
+\null
+\BookNumber{261}
+\Vertical{129}{11}{}{7}{10}醉\\酒\\的\\女\\神\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{38.50}{22.14}{}{0}{指着黄泉起誓。}
+\BookLine{55.50}{0.00}{\heifont}{0}{三姐妹：}
+\BookLine{64.00}{22.14}{}{0}{这会违反所有的法则。宙斯会审判的，骗子。}
+\BookLine{81.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{89.50}{22.14}{}{0}{{\kaifont （警告）}指着黄泉起誓。}
+\BookLine{106.50}{0.00}{\heifont}{0}{三姐妹：}
+\BookLine{115.00}{22.14}{}{0}{宙斯！我们要去找宙斯说这件事，他会决定的。}
+\BookLine{132.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{140.50}{22.14}{}{0}{宙斯也是指着黄泉起誓，并且会遵守自己的}
+\BookLine{149.00}{22.14}{}{0}{誓言。}
+\BookLine{166.00}{7.38}{\kaifont}{0}{突然静场。}
+\newpage
+% 原书页码：262
+\null
+\BookNumber{262}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{38.50}{22.14}{}{0}{{\kaifont （下了决心，但带着不祥的语气）}你可以实}
+\BookLine{47.00}{22.14}{}{0}{现你的愿望——阿德墨托斯国王的性命。}
+\BookLine{55.50}{22.14}{}{0}{不过——}
+\BookLine{72.50}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{81.00}{22.14}{}{0}{{\kaifont （带着胜利的语气）}我救了阿德墨托斯的命！}
+\BookLine{98.00}{0.00}{\heifont}{0}{三姐妹：}
+\BookLine{106.50}{22.14}{}{0}{不过——}
+\BookLine{123.50}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{132.00}{22.14}{}{0}{我救了阿德墨托斯的命！你还要说什么？}
+\BookLine{149.00}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{157.50}{22.14}{}{0}{需要有人替他去死。}
+\newpage
+% 原书页码：263
+\null
+\BookNumber{263}
+\Vertical{129}{11}{}{7}{10}醉\\酒\\的\\女\\神\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{38.50}{22.14}{}{0}{{\kaifont （轻松地）}哦——随便选个奴隶就好。在你们那}
+\BookLine{47.00}{22.14}{}{0}{些线里找一根灰色、油腻的线就好了，圣洁的}
+\BookLine{55.50}{22.14}{}{0}{拉刻西斯。}
+\BookLine{72.50}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{81.00}{22.14}{}{0}{{\kaifont （十分愤怒）}什么？你让我们拿走别人的性命？}
+\BookLine{98.00}{0.00}{\heifont}{0}{阿特洛波斯：}
+\BookLine{106.50}{22.14}{}{0}{你让我们杀人？}
+\BookLine{123.50}{0.00}{\heifont}{0}{克洛托：}
+\BookLine{132.00}{22.14}{}{0}{阿波罗觉得我们都是刽子手？}
+\BookLine{149.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{157.50}{22.14}{}{0}{{\kaifont （感到有些畏惧）}那，伟大的命运女神们，这件}
+\BookLine{166.00}{22.14}{}{0}{事怎么办呢？}
+\newpage
+% 原书页码：264
+\null
+\BookNumber{264}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{38.50}{22.14}{}{0}{我——一个杀手？{\kaifont （张开双臂，庄严地）}我的左}
+\BookLine{47.00}{22.14}{}{0}{手是人生际遇，我的右手是自然规律。}
+\BookLine{64.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{72.50}{22.14}{}{0}{那，仁慈的命运女神们，这件事怎么办呢？}
+\BookLine{89.50}{0.00}{\heifont}{0}{拉刻西斯：}
+\BookLine{98.00}{22.14}{}{0}{必须有人为阿德墨托斯国王献出自己的生命，}
+\BookLine{106.50}{22.14}{}{0}{出于自己的选择和意愿。对于这样的死亡，我}
+\BookLine{115.00}{22.14}{}{0}{们无法掌控，无论是人生际遇还是自然规律，}
+\BookLine{123.50}{22.14}{}{0}{都无法控制出于自由意志的奉献。必须有人选}
+\BookLine{132.00}{22.14}{}{0}{择代替塞萨利国王阿德墨托斯去死。}
+\BookLine{149.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{157.50}{22.14}{}{0}{{\kaifont （用手捂住自己的脸）}不！不！我知道要发生什}
+\BookLine{166.00}{22.14}{}{0}{么了！{\kaifont （大喊道）}阿尔刻提斯！阿尔刻提斯！}
+\newpage
+% 原书页码：265
+\null
+\BookNumber{265}
+\Vertical{129}{11}{}{7}{10}醉\\酒\\的\\女\\神\EndVertical
+\BookLine{30.00}{7.38}{\kaifont}{0}{他跌跌撞撞地跑下场。}
+\BookLine{47.00}{7.38}{\kaifont}{0}{——剧终——}
+\end{document}

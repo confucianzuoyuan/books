@@ -1,0 +1,524 @@
+% !TeX program = xelatex
+% 由扫描件人工逐行转录。每个 \BookLine 对应原书一行，可直接编辑。
+\documentclass[10pt]{article}
+\usepackage[paperwidth=140mm,paperheight=210mm,margin=16mm]{geometry}
+\usepackage{fontspec,xeCJK,graphicx,xcolor,tikz}
+\usepackage[absolute,overlay]{textpos}
+\usepackage[unicode,pdfpagelayout=TwoPageRight,pdftitle={阿尔刻提斯之歌（扫描部分重排）},pdfauthor={}]{hyperref}
+\setmainfont{Liberation Serif}
+\IfFileExists{/usr/local/share/fonts/f/FZShuSong_Z01_Regular.ttf}{
+  \setCJKmainfont{FZShuSong_Z01_Regular.ttf}[Path=/usr/local/share/fonts/f/]
+}{\setCJKmainfont{Noto Serif CJK SC}}
+\IfFileExists{/usr/local/share/fonts/f/FZKai_Z03_Regular.ttf}{
+  \newCJKfontfamily\kaifont{FZKai_Z03_Regular.ttf}[Path=/usr/local/share/fonts/f/]
+}{\newCJKfontfamily\kaifont{FangSong}}
+\IfFileExists{/usr/local/share/fonts/f/FZHei_B01_Regular.ttf}{
+  \newCJKfontfamily\heifont{FZHei_B01_Regular.ttf}[Path=/usr/local/share/fonts/f/]
+}{\newCJKfontfamily\heifont{Noto Sans CJK SC}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\TPHorizModule}{1mm}
+\setlength{\TPVertModule}{1mm}
+\textblockorigin{0mm}{0mm}
+\xeCJKsetup{PunctStyle=plain}
+\newsavebox{\rowbox}
+% y（毫米）, 缩进（毫米）, 字体, 是否铺满行, 文字。
+\newcommand{\BookLine}[5]{%
+  \begin{textblock*}{108mm}(16mm,#1mm)
+  \fontsize{10.5}{14}\selectfont #3%
+  \hspace*{#2mm}%
+  \begingroup
+  \ifnum#4=1 \renewcommand\CJKglue{\hskip 0pt plus 1fill}\fi
+  \sbox{\rowbox}{#5}%
+  \ifdim\wd\rowbox>\dimexpr108mm-#2mm\relax
+    \resizebox{\dimexpr108mm-#2mm\relax}{!}{\usebox{\rowbox}}%
+  \else
+    \ifnum#4=1
+      \makebox[\dimexpr108mm-#2mm\relax][s]{#5}%
+    \else\usebox{\rowbox}\fi
+  \fi
+  \endgroup
+  \end{textblock*}%
+}
+\newcommand{\Vertical}[5]{%
+  \begin{textblock*}{8mm}(#1mm,#2mm)
+    #3\fontsize{#4}{#5}\selectfont\centering
+}
+\newcommand{\EndVertical}{\end{textblock*}}
+\newcommand{\BookNumber}[1]{%
+  \begin{textblock*}{140mm}(0mm,192mm)
+  \centering\fontsize{12}{12}\selectfont\itshape #1
+  \end{textblock*}
+}
+\newcommand{\ActOrnament}[1][一]{%
+  \Vertical{66}{28}{}{14}{21}第\\#1\\幕\EndVertical
+  \begin{textblock*}{140mm}(0mm,63mm)
+    \centering\textcolor{black!65}{\fontsize{10}{10}\selectfont\textbullet}
+  \end{textblock*}
+  \begin{textblock*}{75mm}(38mm,96mm)
+  \begin{tikzpicture}[x=1mm,y=1mm,line width=.35pt,draw=black!65]
+    % 后方拱门。
+    \draw (16,0) -- (57,0) -- (57,39)
+      .. controls (57,48) and (53,55) .. (48,59);
+    \draw (16,0) -- (16,5);
+    % 前方拱门。
+    \draw (0,5) -- (48,5) -- (48,49)
+      arc[start angle=0,end angle=180,radius=24] -- cycle;
+    % 沿拱门上方逐字排出书名，不依赖扫描图。
+    \foreach \letter [count=\i from 0] in {T,h,e,A,l,c,e,s,t,i,a,d}{%
+      \pgfmathsetmacro{\a}{153-\i*11.45}
+      \node[rotate=\a-90,text=black!80,font=\fontsize{9}{9}\selectfont]
+        at ({24+35*cos(\a)},{49+35*sin(\a)}) {\letter};
+    }
+  \end{tikzpicture}
+  \end{textblock*}
+}
+\newcommand{\WorkOrnament}[1]{%
+  \Vertical{58}{26}{}{14}{21}#1\EndVertical
+  \begin{textblock*}{140mm}(0mm,63mm)
+    \centering\textcolor{black!65}{\fontsize{10}{10}\selectfont\textbullet}
+  \end{textblock*}
+  \begin{textblock*}{75mm}(38mm,96mm)
+  \begin{tikzpicture}[x=1mm,y=1mm,line width=.35pt,draw=black!65]
+    \draw (16,0) -- (57,0) -- (57,39) .. controls (57,48) and (53,55) .. (48,59);
+    \draw (16,0) -- (16,5);
+    \draw (0,5) -- (48,5) -- (48,49) arc[start angle=0,end angle=180,radius=24] -- cycle;
+    \foreach \letter [count=\i from 0] in {T,h,e,A,l,c,e,s,t,i,a,d}{%
+      \pgfmathsetmacro{\a}{153-\i*11.45}
+      \node[rotate=\a-90,text=black!80,font=\fontsize{9}{9}\selectfont]
+        at ({24+35*cos(\a)},{49+35*sin(\a)}) {\letter};
+    }
+  \end{tikzpicture}
+  \end{textblock*}
+}
+\begin{document}
+\null
+\BookNumber{202}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{38.50}{22.14}{}{0}{我们向神明祈求健康，财富，自己的幸福。但}
+\BookLine{47.00}{22.14}{}{0}{神明想要给予我们一些其他的东西，一些更好}
+\BookLine{55.50}{22.14}{}{0}{的东西——对生命的理解。我们总是太快地拒}
+\BookLine{64.00}{22.14}{}{0}{绝他们的赐予……不，不！阿波罗从没有放弃}
+\BookLine{72.50}{22.14}{}{0}{过我……费莱的百姓，阿德墨托斯国王可曾待}
+\BookLine{81.00}{22.14}{}{0}{你们有何不公？}
+\BookLine{98.00}{0.00}{\heifont}{0}{居民：}
+\BookLine{106.50}{22.14}{}{0}{没有，阿尔刻提斯王后！}
+\BookLine{123.50}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{132.00}{22.14}{}{0}{我呢？}
+\BookLine{149.00}{0.00}{\heifont}{0}{居民：}
+\BookLine{157.50}{22.14}{}{0}{没有，阿尔刻提斯王后！}
+\newpage
+% 原书页码：203
+\null
+\BookNumber{203}
+\Vertical{129}{11}{}{7}{10}第\\三\\幕\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{38.50}{22.14}{}{0}{你们觉得神明是为了惩罚我们的罪恶才降下这}
+\BookLine{47.00}{22.14}{}{0}{些灾难吗？}
+\BookLine{64.00}{0.00}{\heifont}{0}{居民：}
+\BookLine{72.50}{22.14}{}{0}{不！不！}
+\BookLine{89.50}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{98.00}{22.14}{}{0}{就算赫拉克勒斯从死神那里带回来了什么，你}
+\BookLine{106.50}{22.14}{}{0}{们觉得没有神明全权的准许，他能做到吗？}
+\BookLine{123.50}{0.00}{\heifont}{0}{居民：}
+\BookLine{132.00}{22.14}{}{0}{不能，不能！}
+\BookLine{149.00}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{157.50}{22.14}{}{0}{那么，为什么会有这场瘟疫呢？}
+\newpage
+% 原书页码：204
+\null
+\BookNumber{204}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{38.50}{22.14}{}{0}{神明降下灾难……是让我们注意……让我们停}
+\BookLine{47.00}{22.14}{}{0}{下来，睁开自己的眼睛……}
+\BookLine{64.00}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{72.50}{22.14}{}{0}{让我们注意什么，阿尔刻提斯？}
+\BookLine{89.50}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{98.00}{22.14}{}{0}{{\kaifont （抬起头，像是在倾听）}我不知道，注意某种}
+\BookLine{106.50}{22.14}{}{0}{启示。}
+\BookLine{123.50}{7.38}{\kaifont}{0}{场上陷入片刻静待的状态，突然间站在路高处的守卫看}
+\BookLine{132.00}{0.00}{\kaifont}{0}{到了两个年轻人，大喊道。}
+\BookLine{149.00}{0.00}{\heifont}{0}{守卫一：}
+\BookLine{157.50}{22.14}{}{0}{陛下，这儿有两个陌生人！}
+\newpage
+% 原书页码：205
+\null
+\BookNumber{205}
+\Vertical{129}{11}{}{7}{10}第\\三\\幕\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{38.50}{22.14}{}{0}{{\kaifont （走上前去，保持一个安全距离）}你们是怎么进}
+\BookLine{47.00}{22.14}{}{0}{来的？守卫！把他们围起来！}
+\BookLine{64.00}{7.38}{\kaifont}{0}{守卫们围了过去。}
+\BookLine{81.00}{22.14}{}{0}{放下武器！}
+\BookLine{98.00}{0.00}{\heifont}{0}{伊皮伊尼兹：}
+\BookLine{106.50}{22.14}{}{0}{阿吉斯国王，没门！}
+\BookLine{123.50}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{132.00}{22.14}{}{0}{你们被困在那个洞里，还能怎么样？放下你们}
+\BookLine{140.50}{22.14}{}{0}{的剑！}
+\BookLine{157.50}{7.38}{\kaifont}{0}{阿尔刻提斯不住地摇头，嘴里默念着：“阿吉斯国王，阿}
+\BookLine{166.00}{0.00}{\kaifont}{0}{吉斯国王……”}
+\newpage
+% 原书页码：206
+\null
+\BookNumber{206}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{38.50}{22.14}{}{0}{{\kaifont （对阿尔刻提斯说）}是你把他们放进来的。你们}
+\BookLine{47.00}{22.14}{}{0}{都没有往脸上蒙上灰尘。{\kaifont （对守卫）}杀了他们！}
+\BookLine{55.50}{22.14}{}{0}{杀了他们！}
+\BookLine{72.50}{7.38}{\kaifont}{0}{两个守卫怯生生地往下走。}
+\BookLine{89.50}{22.14}{}{0}{懦夫！叛徒！照我说的去做！}
+\BookLine{106.50}{7.38}{\kaifont}{0}{舞台上一名守卫突然疫病发作，他扔掉手中的长矛，喊}
+\BookLine{115.00}{0.00}{\kaifont}{0}{了起来。}
+\BookLine{132.00}{0.00}{\heifont}{0}{守卫三：}
+\BookLine{140.50}{22.14}{}{0}{阿吉斯国王！水！是瘟疫！我觉得自己烧起来}
+\BookLine{149.00}{22.14}{}{0}{了！救救我！帮帮我！我在燃烧！}
+\BookLine{166.00}{7.38}{\kaifont}{0}{他断断续续地呕吐着。}
+\newpage
+% 原书页码：207
+\null
+\BookNumber{207}
+\Vertical{129}{11}{}{7}{10}第\\三\\幕\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{38.50}{22.14}{}{0}{{\kaifont （向后退，人群都向后退着）}把他拖出去！用你}
+\BookLine{47.00}{22.14}{}{0}{们的矛赶他走！}
+\BookLine{64.00}{0.00}{\heifont}{0}{守卫三：}
+\BookLine{72.50}{22.14}{}{0}{{\kaifont （身体剧烈地左右摇晃，一边呕吐一边喊着）}}
+\BookLine{81.00}{22.14}{}{0}{水！水！我要死了！}
+\BookLine{98.00}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{106.50}{22.14}{}{0}{{\kaifont （用手挡住自己的脸）}把他拖到路上去。}
+\BookLine{123.50}{7.38}{\kaifont}{0}{一阵骚动。生病的守卫努力向门口爬去，其余的守卫和}
+\BookLine{132.00}{0.00}{\kaifont}{0}{镇上的居民们都转过脸去，或是拿着长矛或是用脚踢，想把}
+\BookLine{140.50}{0.00}{\kaifont}{0}{他快点赶走。生病的守卫将大家的注意力从伊皮伊尼兹和切}
+\BookLine{149.00}{0.00}{\kaifont}{0}{瑞安德身上转移开了，场上一度只能听见大家喊叫的声音。}
+\BookLine{166.00}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{174.50}{22.14}{}{0}{{\kaifont （尖叫着）}带上我的武器！我的马匹！回色雷斯}
+\newpage
+% 原书页码：208
+\null
+\BookNumber{208}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{22.14}{}{0}{去！回色雷斯去！{\kaifont （对阿尔刻提斯）}热情好客的}
+\BookLine{38.50}{22.14}{}{0}{塞萨利我还给你，阿尔刻提斯王后！你自己统}
+\BookLine{47.00}{22.14}{}{0}{治你的这些死人吧！}
+\BookLine{64.00}{0.00}{\heifont}{0}{伊皮伊尼兹：}
+\BookLine{72.50}{22.14}{}{0}{快，切瑞安德！}
+\BookLine{89.50}{7.38}{\kaifont}{0}{他们冲上舞台。}
+\BookLine{106.50}{0.00}{\heifont}{0}{切瑞安德：}
+\BookLine{115.00}{22.14}{}{0}{给他一剑，伊皮伊尼兹！}
+\BookLine{132.00}{0.00}{\heifont}{0}{伊皮伊尼兹：}
+\BookLine{140.50}{22.14}{}{0}{阿吉斯，我是阿德墨托斯之子，伊皮伊尼兹！}
+\BookLine{157.50}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{166.00}{22.14}{}{0}{你是谁？这是怎么了？守卫！}
+\newpage
+% 原书页码：209
+\null
+\BookNumber{209}
+\Vertical{129}{11}{}{7}{10}第\\三\\幕\EndVertical
+\BookLine{30.00}{7.38}{\kaifont}{0}{阿尔刻提斯摇着头，站在阿吉斯国王身前，伸出手阻止}
+\BookLine{38.50}{0.00}{\kaifont}{0}{伊皮伊尼兹。}
+\BookLine{55.50}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{64.00}{22.14}{}{0}{不，伊皮伊尼兹！不要！}
+\BookLine{81.00}{0.00}{\heifont}{0}{伊皮伊尼兹：}
+\BookLine{89.50}{22.14}{}{0}{{\kaifont （对阿尔刻提斯的态度十分愤怒）}母亲！我们的}
+\BookLine{98.00}{22.14}{}{0}{机会来了啊。是他杀了我的父亲！}
+\BookLine{115.00}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{123.50}{22.14}{}{0}{不要这样做！}
+\BookLine{140.50}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{149.00}{22.14}{}{0}{守卫！{\kaifont （狂躁地左右踱步）}一群懦夫！守卫！}
+\BookLine{166.00}{0.00}{\heifont}{0}{切瑞安德：}
+\BookLine{174.50}{22.14}{}{0}{伊皮伊尼兹，照你母亲说的做。}
+\newpage
+% 原书页码：210
+\null
+\BookNumber{210}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{38.50}{22.14}{}{0}{{\kaifont （背对着阿吉斯和他说话）}对的，阿吉斯国王，}
+\BookLine{47.00}{22.14}{}{0}{回你自己的国家去吧。}
+\BookLine{64.00}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{72.50}{22.14}{}{0}{这是你儿子吗？阿尔刻提斯，回答我，是你儿}
+\BookLine{81.00}{22.14}{}{0}{子吗？}
+\BookLine{98.00}{7.38}{\kaifont}{0}{眼见复仇计划受挫，伊皮伊尼兹愤怒又沮丧，他跪在地}
+\BookLine{106.50}{0.00}{\kaifont}{0}{上，一直在用刀柄敲打地面。}
+\BookLine{123.50}{0.00}{\heifont}{0}{伊皮伊尼兹：}
+\BookLine{132.00}{22.14}{}{0}{我要报仇！报仇！}
+\BookLine{149.00}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{157.50}{22.14}{}{0}{伊皮伊尼兹，记得你父亲说过的话：举刀杀人，}
+\BookLine{166.00}{22.14}{}{0}{伤的是自己。}
+\newpage
+% 原书页码：211
+\null
+\BookNumber{211}
+\Vertical{129}{11}{}{7}{10}第\\三\\幕\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{伊皮伊尼兹：}
+\BookLine{38.50}{22.14}{}{0}{{\kaifont （前额贴着地面哭泣）}他杀了我的父亲……我的}
+\BookLine{47.00}{22.14}{}{0}{弟弟……妹妹……}
+\BookLine{64.00}{7.38}{\kaifont}{0}{守卫二从宫殿里跑了出来。}
+\BookLine{81.00}{0.00}{\heifont}{0}{守卫二：}
+\BookLine{89.50}{22.14}{}{0}{阿吉斯国王！您的女儿，劳德米娅公主！她一}
+\BookLine{98.00}{22.14}{}{0}{直在敲门在喊您，非常痛苦。阿吉斯国王，她}
+\BookLine{106.50}{22.14}{}{0}{非常痛苦！}
+\BookLine{123.50}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{132.00}{22.14}{}{0}{{\kaifont （举起双臂）}神明们，停手吧！劳德米娅！劳德}
+\BookLine{140.50}{22.14}{}{0}{米娅！停手吧，你们这些不朽的众神！{\kaifont （阿吉斯}}
+\BookLine{149.00}{22.14}{}{0}{{\kaifont 跑进宫殿）}}
+\BookLine{166.00}{7.38}{\kaifont}{0}{阿尔刻提斯站在伊皮伊尼兹身边，把手放在他的肩膀上。}
+\newpage
+% 原书页码：212
+\null
+\BookNumber{212}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{38.50}{22.14}{}{0}{一个人一旦从复仇中得到快乐，他就不会再有}
+\BookLine{47.00}{22.14}{}{0}{其他快乐了，这是你父亲说过的话。{\kaifont （转向居}}
+\BookLine{55.50}{22.14}{}{0}{{\kaifont 民们，冷静地）}朋友们，回家去，拿上你们的}
+\BookLine{64.00}{22.14}{}{0}{篮子和水罐，然后到南边大门外的硫矿那里}
+\BookLine{72.50}{22.14}{}{0}{去。伊皮伊尼兹，你还记得小时候常常去玩的}
+\BookLine{81.00}{22.14}{}{0}{那片矿区吗？那儿有很多工人们制铁时用的硫}
+\BookLine{89.50}{22.14}{}{0}{黄……取一些拿到路上去烧，然后撒到死者们}
+\BookLine{98.00}{22.14}{}{0}{的身上。{\kaifont （对守卫们）}你们去帮着一起干吧，这}
+\BookLine{106.50}{22.14}{}{0}{儿已经没有什么事了。伊皮伊尼兹，站起来。}
+\BookLine{115.00}{22.14}{}{0}{你来带领他们。}
+\BookLine{132.00}{0.00}{\heifont}{0}{伊皮伊尼兹：}
+\BookLine{140.50}{22.14}{}{0}{{\kaifont （起身）}是的，母亲。{\kaifont （带着平静的威严，对守}}
+\BookLine{149.00}{22.14}{}{0}{{\kaifont 卫和镇上的居民）}大家跟我来。}
+\BookLine{166.00}{7.38}{\kaifont}{0}{他们准备离开，切瑞安德返回来，轻柔地，带着敬畏地}
+\BookLine{174.50}{0.00}{\kaifont}{0}{问道。}
+\newpage
+% 原书页码：213
+\null
+\BookNumber{213}
+\Vertical{129}{11}{}{7}{10}第\\三\\幕\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{切瑞安德：}
+\BookLine{38.50}{22.14}{}{0}{阿尔刻提斯王后……您说的那个启示，阿波罗}
+\BookLine{47.00}{22.14}{}{0}{神给我们的启示。阿吉斯国王的这个决定，就}
+\BookLine{55.50}{22.14}{}{0}{是那个启示吗？}
+\BookLine{72.50}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{81.00}{22.14}{}{0}{{\kaifont （抬起头像听着）}不……启示还没有显明呢。}
+\BookLine{98.00}{0.00}{\heifont}{0}{切瑞安德：}
+\BookLine{106.50}{22.14}{}{0}{{\kaifont （带着年轻人的一脸热忱）}您就是那个启示啊！}
+\BookLine{115.00}{22.14}{}{0}{您就是神明的信息和启示，阿尔刻提斯王后！}
+\BookLine{132.00}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{140.50}{22.14}{}{0}{{\kaifont （近乎麻木，摇着头，轻声地）}不，不……}
+\BookLine{157.50}{7.38}{\kaifont}{0}{切瑞安德跟在伊皮伊尼兹身后走了出去。阿吉斯国王从}
+\BookLine{166.00}{0.00}{\kaifont}{0}{宫殿里出来，痛苦地哭号着。}
+\newpage
+% 原书页码：214
+\null
+\BookNumber{214}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{38.50}{22.14}{}{0}{她死了！劳德米娅死了！才十二岁就死了……}
+\BookLine{55.50}{7.38}{\kaifont}{0}{他用拳头捶着柱子和墙，向下走几步又返回。}
+\BookLine{72.50}{22.14}{}{0}{才十二岁。她搂着我的脖子，痛得要命：“父}
+\BookLine{81.00}{22.14}{}{0}{亲，帮帮我，父亲，帮帮我啊！”她的头发，}
+\BookLine{89.50}{22.14}{}{0}{她那么像她的母亲。她的眼睛，她的眼睛。{\kaifont （看}}
+\BookLine{98.00}{22.14}{}{0}{{\kaifont 见阿尔刻提斯）}你！是你造成的这一切！都是}
+\BookLine{106.50}{22.14}{}{0}{你干的！}
+\BookLine{123.50}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{132.00}{22.14}{}{0}{{\kaifont （在阿吉斯说话的间隙一直在小声说着，像是在}}
+\BookLine{140.50}{22.14}{}{0}{{\kaifont 恳求）}阿吉斯……阿吉斯……阿吉斯……}
+\BookLine{157.50}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{166.00}{22.14}{}{0}{{\kaifont （抓住她的手放在自己的额前和胸前）}让我也染}
+\BookLine{174.50}{22.14}{}{0}{上瘟疫吧，让它把我们都杀了吧。“父亲，帮}
+\newpage
+% 原书页码：215
+\null
+\BookNumber{215}
+\Vertical{129}{11}{}{7}{10}第\\三\\幕\EndVertical
+\BookLine{30.00}{22.14}{}{0}{帮我！”她是我的一切啊。现在她死了，死了，}
+\BookLine{38.50}{22.14}{}{0}{死了！}
+\BookLine{55.50}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{64.00}{22.14}{}{0}{阿吉斯……阿吉斯……}
+\BookLine{81.00}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{89.50}{22.14}{}{0}{你，赫拉克勒斯曾把你从死神那儿带回来，你}
+\BookLine{98.00}{22.14}{}{0}{有办法。{\kaifont （突然想到了什么）}赫拉克勒斯把你带}
+\BookLine{106.50}{22.14}{}{0}{回来了。在哪里？是这里吗？{\kaifont （跌跌撞撞地沿}}
+\BookLine{115.00}{22.14}{}{0}{{\kaifont 着路走下去）}在那儿是不是？{\kaifont （匆忙地走下去）}}
+\BookLine{123.50}{22.14}{}{0}{告诉我，阿尔刻提斯，赫拉克勒斯是怎么做到}
+\BookLine{132.00}{22.14}{}{0}{的？在下面都发生了什么？}
+\BookLine{149.00}{7.38}{\kaifont}{0}{阿尔刻提斯沉默地摇摇头。}
+\BookLine{166.00}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{174.50}{22.14}{}{0}{告诉我他是怎么做到的，我也可以。劳德米娅，}
+\newpage
+% 原书页码：216
+\null
+\BookNumber{216}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{22.14}{}{0}{我要来救你。阿尔刻提斯，你回答我！}
+\BookLine{47.00}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{55.50}{22.14}{}{0}{阿吉斯，我那时候什么也没看到，没听到。}
+\BookLine{72.50}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{81.00}{22.14}{}{0}{你说谎！}
+\BookLine{98.00}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{106.50}{22.14}{}{0}{阿吉斯，你听我说，我有话对你说。}
+\BookLine{123.50}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{132.00}{22.14}{}{0}{你说啊！说啊！}
+\BookLine{149.00}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{157.50}{22.14}{}{0}{“父亲，帮帮我！”}
+\newpage
+% 原书页码：217
+\null
+\BookNumber{217}
+\Vertical{129}{11}{}{7}{10}第\\三\\幕\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{38.50}{22.14}{}{0}{不要嘲弄我了。}
+\BookLine{55.50}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{64.00}{22.14}{}{0}{我不是在嘲弄。阿吉斯国王，劳德米娅说这些}
+\BookLine{72.50}{22.14}{}{0}{是什么意思？}
+\BookLine{89.50}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{98.00}{22.14}{}{0}{她觉得很疼，疼得要命！}
+\BookLine{115.00}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{123.50}{22.14}{}{0}{是，但这不是全部。她还想要表达什么？}
+\BookLine{140.50}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{149.00}{22.14}{}{0}{还有什么？}
+\BookLine{166.00}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{174.50}{22.14}{}{0}{阿吉斯国王，死亡本身的痛苦，只是痛苦的一}
+\newpage
+% 原书页码：218
+\null
+\BookNumber{218}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{22.14}{}{0}{部分，并非全部。死亡带给人最大的痛苦不是}
+\BookLine{38.50}{22.14}{}{0}{分离，尽管这也会让人非常非常悲伤。我死过}
+\BookLine{47.00}{22.14}{}{0}{一次。阿吉斯国王，死亡带给人最大的痛苦是}
+\BookLine{55.50}{22.14}{}{0}{什么？}
+\BookLine{72.50}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{81.00}{22.14}{}{0}{告诉我！}
+\BookLine{98.00}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{106.50}{22.14}{}{0}{是发现自己从未活过的绝望，是发现生命毫无}
+\BookLine{115.00}{22.14}{}{0}{意义的绝望。生命没有任何意义，快乐也好，}
+\BookLine{123.50}{22.14}{}{0}{不快乐也好，都成了空白。“父亲，帮帮我！”}
+\BookLine{140.50}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{149.00}{22.14}{}{0}{她曾经多么爱我，阿尔刻提斯。}
+\BookLine{166.00}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{174.50}{22.14}{}{0}{是的。}
+\newpage
+% 原书页码：219
+\null
+\BookNumber{219}
+\Vertical{129}{11}{}{7}{10}第\\三\\幕\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{38.50}{22.14}{}{0}{她曾经多么爱我。}
+\BookLine{55.50}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{64.00}{22.14}{}{0}{是的，但爱不是全部。}
+\BookLine{81.00}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{89.50}{22.14}{}{0}{是。对她，对我来说都是的。我不会听你的。}
+\BookLine{106.50}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{115.00}{22.14}{}{0}{爱不是全部的意义。它是一个启示，让我们明}
+\BookLine{123.50}{22.14}{}{0}{白一切是有意义的。它只是一个启示，让我们}
+\BookLine{132.00}{22.14}{}{0}{明白一切是有意义的。劳德米娅感到很绝望，}
+\BookLine{140.50}{22.14}{}{0}{希望你能帮助她。这就是死亡——死就是绝}
+\BookLine{149.00}{22.14}{}{0}{望。除非你赋予它意义，否则她的生命不过是}
+\BookLine{157.50}{22.14}{}{0}{空白与空虚。}
+\newpage
+% 原书页码：220
+\null
+\BookNumber{220}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{38.50}{22.14}{}{0}{我能赋予它什么意义？}
+\BookLine{55.50}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{64.00}{22.14}{}{0}{{\kaifont （平静地）}你真是一个粗俗、残忍、无知的人。}
+\BookLine{72.50}{22.14}{}{0}{{\kaifont （短暂的静场）}是你杀了“我的”劳德米娅。三}
+\BookLine{81.00}{22.14}{}{0}{次。无情地。你自己都不知道多少次杀死了她。}
+\BookLine{98.00}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{106.50}{22.14}{}{0}{不！}
+\BookLine{123.50}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{132.00}{22.14}{}{0}{你什么都不明白。回你自己的国家去吧。在那}
+\BookLine{140.50}{22.14}{}{0}{儿，只有在那儿，你还可以为劳德米娅做些}
+\BookLine{149.00}{22.14}{}{0}{事情。}
+\BookLine{166.00}{7.38}{\kaifont}{0}{阿吉斯沿着小路走上来，走过阿尔刻提斯身边，径直走}
+\BookLine{174.50}{0.00}{\kaifont}{0}{向宫殿大门。}
+\newpage
+% 原书页码：221
+\null
+\BookNumber{221}
+\Vertical{129}{11}{}{7}{10}第\\三\\幕\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{38.50}{22.14}{}{0}{阿吉斯国王，所有的死者……{\kaifont （她指着地下世}}
+\BookLine{47.00}{22.14}{}{0}{{\kaifont 界的入口）}那里成千上万的死者，在等着我们}
+\BookLine{55.50}{22.14}{}{0}{向他们表明，他们不是白白地、无益地死去。}
+\BookLine{72.50}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{81.00}{22.14}{}{0}{我能赋予劳德米娅的生命什么意义呢？}
+\BookLine{98.00}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{106.50}{22.14}{}{0}{从今天开始，你会慢慢明白的。}
+\BookLine{123.50}{0.00}{\heifont}{0}{阿吉斯：}
+\BookLine{132.00}{22.14}{}{0}{{\kaifont （他的头抵着宫殿的门）}不。}
+\BookLine{149.00}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{157.50}{22.14}{}{0}{我也是慢慢才明白的。即使是我。你会明白的，}
+\BookLine{166.00}{22.14}{}{0}{阿吉斯国王……从劳德米娅遭受的痛苦之中，}
+\BookLine{174.50}{22.14}{}{0}{你会明白的。}
+\newpage
+% 原书页码：222
+\null
+\BookNumber{222}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{7.38}{\kaifont}{0}{被彻底击垮的阿吉斯走进宫殿。他慢慢退场后，灯光渐}
+\BookLine{38.50}{0.00}{\kaifont}{0}{渐照在阿波罗身上，他从宫殿里走出，慢慢走下来。他穿着}
+\BookLine{47.00}{0.00}{\kaifont}{0}{斗篷，兜帽被取了下来落在肩上，露出头顶的花环。他先是}
+\BookLine{55.50}{0.00}{\kaifont}{0}{站在门边同阿尔刻提斯说话，随后慢慢跟在她身后走着。场}
+\BookLine{64.00}{0.00}{\kaifont}{0}{上只剩阿尔刻提斯一人，她闭着眼睛朝左边走了几步。她的}
+\BookLine{72.50}{0.00}{\kaifont}{0}{头一直低着，像是背负着重担，她的身体缩成一团，像是已}
+\BookLine{81.00}{0.00}{\kaifont}{0}{经很老了。她转向右边，慢慢向通往大路的门边走去，半睁}
+\BookLine{89.50}{0.00}{\kaifont}{0}{着她的眼睛。}
+\BookLine{106.50}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{115.00}{22.14}{}{0}{再走几步，阿尔刻提斯。穿过这道门……穿过}
+\BookLine{123.50}{22.14}{}{0}{那条路……走到我的林子里去。}
+\BookLine{140.50}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{149.00}{22.14}{}{0}{太远了……太高了……}
+\BookLine{166.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{174.50}{22.14}{}{0}{再走一步。这不是在上山，你不需要抬脚。}
+\newpage
+% 原书页码：223
+\null
+\BookNumber{223}
+\Vertical{129}{11}{}{7}{10}第\\三\\幕\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{38.50}{22.14}{}{0}{太远了。我在这儿找个坟墓就好了。}
+\BookLine{55.50}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{64.00}{22.14}{}{0}{阿尔刻提斯，你不会去到坟墓里的。}
+\BookLine{81.00}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{89.50}{22.14}{}{0}{哦，不，我只想找到我的坟墓。}
+\BookLine{106.50}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{115.00}{22.14}{}{0}{坟墓意味着终结，可你的生命不会这样终结。}
+\BookLine{123.50}{22.14}{}{0}{在许许多多人里面，你是第一个无须面对终结}
+\BookLine{132.00}{22.14}{}{0}{的人。再走一步，阿尔刻提斯。}
+\BookLine{149.00}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{157.50}{22.14}{}{0}{我会有子孙吗？后代的后代？}
+\newpage
+% 原书页码：224
+\null
+\BookNumber{224}
+\Vertical{4}{169}{}{6.2}{8}阿\\尔\\刻\\提\\斯\\之\\歌\EndVertical
+\BookLine{30.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{38.50}{22.14}{}{0}{多得数不清。}
+\BookLine{55.50}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{64.00}{22.14}{}{0}{好……我忘了，他叫什么名字？}
+\BookLine{81.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{89.50}{22.14}{}{0}{阿德墨托斯。}
+\BookLine{106.50}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{115.00}{22.14}{}{0}{对，还有我想侍奉的，明亮如光的那一位？}
+\BookLine{132.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{140.50}{22.14}{}{0}{阿波罗。}
+\BookLine{157.50}{0.00}{\heifont}{0}{阿尔刻提斯：}
+\BookLine{166.00}{22.14}{}{0}{对……{\kaifont （走到门边）}许许多多的日子……都被}
+\BookLine{174.50}{22.14}{}{0}{眷顾着……{\kaifont （抬起头，闭上眼睛）}这些幸福，}
+\newpage
+% 原书页码：225
+\null
+\BookNumber{225}
+\Vertical{129}{11}{}{7}{10}第\\三\\幕\EndVertical
+\BookLine{30.00}{22.14}{}{0}{我该感谢谁呢？}
+\BookLine{47.00}{0.00}{\heifont}{0}{阿波罗：}
+\BookLine{55.50}{22.14}{}{0}{朋友不会问彼此这样的问题。}
+\BookLine{72.50}{7.38}{\kaifont}{0}{她走了出去。}
+\BookLine{81.00}{7.38}{\kaifont}{0}{阿波罗提高了自己的嗓音，像是要保证她在墙外仍然能}
+\BookLine{89.50}{0.00}{\kaifont}{0}{听到自己的声音。}
+\BookLine{106.50}{22.14}{}{0}{那些真正爱过的人，不会问彼此这样的问题。}
+\BookLine{115.00}{22.14}{}{0}{阿尔刻提斯。}
+\BookLine{132.00}{7.38}{\kaifont}{0}{——剧终——}
+\end{document}
